@@ -1,0 +1,15 @@
+{
+  "name": "leaderboard-thpt2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bảng xếp hạng điểm thi THPT - Trường THPT Lý Tự Trọng",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build:client": "npm run build -w client",
+    "crawl": "npm run crawl -w server",
+    "import": "npm run import -w server",
+    "start": "npm run start -w server"
+  }
+}

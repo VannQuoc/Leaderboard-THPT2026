@@ -1,0 +1,6248 @@
+{
+  "school": {
+    "name": "Trường THPT Lý Tự Trọng",
+    "year": 2026
+  },
+  "students": [
+    {
+      "sbd": "42008372",
+      "hoTen": "Lê Trần Diệu Anh",
+      "ngaySinh": "23/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 357,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008377",
+      "hoTen": "Nguyễn Phương Anh",
+      "ngaySinh": "22/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 357,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008384",
+      "hoTen": "Nguyễn Thị Quỳnh Anh",
+      "ngaySinh": "22/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 357,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008385",
+      "hoTen": "Nguyễn Thị Thùy Anh",
+      "ngaySinh": "30/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 357,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008395",
+      "hoTen": "Phan Văn Tuấn Anh",
+      "ngaySinh": "04/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 357,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008398",
+      "hoTen": "Trịnh Hà Hoàng Anh",
+      "ngaySinh": "16/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 357,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008441",
+      "hoTen": "Nguyễn Thị Quỳnh Chi",
+      "ngaySinh": "18/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 358,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008455",
+      "hoTen": "Hà Thị Phương Diễm",
+      "ngaySinh": "19/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 358,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008464",
+      "hoTen": "Nguyễn Thị Mỹ Dung",
+      "ngaySinh": "06/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 358,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008476",
+      "hoTen": "Nguyễn Tuấn Dũng",
+      "ngaySinh": "18/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A2",
+      "phongThi": 359,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008488",
+      "hoTen": "Lê Thị Mỹ Duyên",
+      "ngaySinh": "14/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 359,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008493",
+      "hoTen": "Lê Văn Dương",
+      "ngaySinh": "04/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A2",
+      "phongThi": 359,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008502",
+      "hoTen": "Lê Linh Đan",
+      "ngaySinh": "18/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 359,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008508",
+      "hoTen": "Nguyễn Hải Đăng",
+      "ngaySinh": "03/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 359,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008524",
+      "hoTen": "Nguyễn Thị Hà Giang",
+      "ngaySinh": "25/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008535",
+      "hoTen": "Võ Thị Phương Giang",
+      "ngaySinh": "10/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008538",
+      "hoTen": "Hoàng Võ Khánh Hà",
+      "ngaySinh": "25/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008542",
+      "hoTen": "Nguyễn Thị Hà",
+      "ngaySinh": "25/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008545",
+      "hoTen": "Nguyễn Thu Hà",
+      "ngaySinh": "12/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008554",
+      "hoTen": "Võ Tá Hải",
+      "ngaySinh": "13/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008558",
+      "hoTen": "Ngô Thị Thanh Hằng",
+      "ngaySinh": "08/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008559",
+      "hoTen": "Nguyễn Thị Hằng",
+      "ngaySinh": "04/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008563",
+      "hoTen": "Trần ái Hân",
+      "ngaySinh": "13/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008565",
+      "hoTen": "Dương Thị Thu Hiền",
+      "ngaySinh": "19/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008568",
+      "hoTen": "Nguyễn Thị Hiền",
+      "ngaySinh": "16/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008572",
+      "hoTen": "Trịnh Thị Thu Hiền",
+      "ngaySinh": "12/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008574",
+      "hoTen": "Võ Thúy Hiền",
+      "ngaySinh": "28/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 360,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008615",
+      "hoTen": "Nguyễn Thị Hợp",
+      "ngaySinh": "27/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 361,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008641",
+      "hoTen": "Phạm Thanh Huyền",
+      "ngaySinh": "22/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 361,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008642",
+      "hoTen": "Phạm Thị Khánh Huyền",
+      "ngaySinh": "10/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 361,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008645",
+      "hoTen": "Trần Thị Huyền",
+      "ngaySinh": "02/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 361,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008657",
+      "hoTen": "Mai Thị Quỳnh Hương",
+      "ngaySinh": "08/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 361,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008689",
+      "hoTen": "Lê Nguyễn Mỹ Linh",
+      "ngaySinh": "20/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 362,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008690",
+      "hoTen": "Nguyễn Hà Linh",
+      "ngaySinh": "02/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 362,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008692",
+      "hoTen": "Nguyễn Hoàng Diệu Linh",
+      "ngaySinh": "16/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 362,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008695",
+      "hoTen": "Nguyễn Khánh Linh",
+      "ngaySinh": "23/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 362,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008704",
+      "hoTen": "Nguyễn Thị Mai Linh",
+      "ngaySinh": "08/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 362,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008705",
+      "hoTen": "Nguyễn Thị Thuỳ Linh",
+      "ngaySinh": "02/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 362,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008709",
+      "hoTen": "Phạm Thị Mỹ Linh",
+      "ngaySinh": "31/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 362,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008730",
+      "hoTen": "Phạm Hữu Lương",
+      "ngaySinh": "02/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 362,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008735",
+      "hoTen": "Nguyễn Thị Cẩm Ly",
+      "ngaySinh": "07/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 363,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008736",
+      "hoTen": "Nguyễn Thị Khánh Ly",
+      "ngaySinh": "17/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 363,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008742",
+      "hoTen": "Nguyễn Thị Ngọc Mai",
+      "ngaySinh": "24/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 363,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008775",
+      "hoTen": "Võ Thị Lê Na",
+      "ngaySinh": "25/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 363,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008788",
+      "hoTen": "Lê Thị Ngân",
+      "ngaySinh": "07/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 363,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008793",
+      "hoTen": "Nguyễn Thị Thảo Ngân",
+      "ngaySinh": "16/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 363,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008802",
+      "hoTen": "Nguyễn Thị Ánh Ngọc",
+      "ngaySinh": "30/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 363,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008817",
+      "hoTen": "Lê Thị Mỹ Nhân",
+      "ngaySinh": "10/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 363,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008843",
+      "hoTen": "Nguyễn Thị Hồng Nhung",
+      "ngaySinh": "06/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 364,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008859",
+      "hoTen": "Nguyễn Gia Phi",
+      "ngaySinh": "22/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A2",
+      "phongThi": 364,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008875",
+      "hoTen": "Đinh Văn Phước",
+      "ngaySinh": "25/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A2",
+      "phongThi": 364,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008922",
+      "hoTen": "Nguyễn Hữu Song",
+      "ngaySinh": "19/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 365,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008962",
+      "hoTen": "Trần Thị Bảo Thi",
+      "ngaySinh": "30/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 365,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008963",
+      "hoTen": "Vũ Đức Thịnh",
+      "ngaySinh": "24/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A2",
+      "phongThi": 365,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009003",
+      "hoTen": "Phan Thị Thanh Trà",
+      "ngaySinh": "25/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 366,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009005",
+      "hoTen": "Đặng Thị Huyền Trang",
+      "ngaySinh": "29/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 366,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009010",
+      "hoTen": "Lê Thu Trang",
+      "ngaySinh": "03/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 366,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009035",
+      "hoTen": "Nguyễn Thị Phương Trinh",
+      "ngaySinh": "07/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 366,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009048",
+      "hoTen": "Hoàng Thị Cẩm Tú",
+      "ngaySinh": "01/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 366,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009061",
+      "hoTen": "Nguyễn Thị Ánh Tuyết",
+      "ngaySinh": "03/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 367,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009067",
+      "hoTen": "Võ Thị Thu Uyên",
+      "ngaySinh": "19/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 367,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009071",
+      "hoTen": "Nguyễn Thị Thùy Vân",
+      "ngaySinh": "10/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 367,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009093",
+      "hoTen": "Nguyễn Hà Vy",
+      "ngaySinh": "27/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 367,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009104",
+      "hoTen": "Nguyễn Diệu Xuân",
+      "ngaySinh": "06/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 367,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008358",
+      "hoTen": "Nguyễn Bá An",
+      "ngaySinh": "12/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008360",
+      "hoTen": "Nguyễn Thị Thuỳ An",
+      "ngaySinh": "16/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008363",
+      "hoTen": "Nguyễn Văn Thái An",
+      "ngaySinh": "08/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008370",
+      "hoTen": "Đồng Hồng Anh",
+      "ngaySinh": "13/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008375",
+      "hoTen": "Nguyễn Ngọc Nhật Anh",
+      "ngaySinh": "13/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008381",
+      "hoTen": "Nguyễn Thị Minh Anh",
+      "ngaySinh": "14/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008393",
+      "hoTen": "Phan Thị Vân Anh",
+      "ngaySinh": "04/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008402",
+      "hoTen": "Lê Ngọc Ánh",
+      "ngaySinh": "03/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008405",
+      "hoTen": "Nguyễn Ngọc Ánh",
+      "ngaySinh": "27/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008408",
+      "hoTen": "Trần Thị Ngọc Ánh",
+      "ngaySinh": "11/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008409",
+      "hoTen": "Lê Hữu Bách",
+      "ngaySinh": "15/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008410",
+      "hoTen": "Nguyễn Văn Ngọc Ban",
+      "ngaySinh": "09/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008413",
+      "hoTen": "Nguyễn Chí Bảo",
+      "ngaySinh": "13/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008416",
+      "hoTen": "Nguyễn Gia Bảo",
+      "ngaySinh": "21/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008418",
+      "hoTen": "Nguyễn Tường Gia Bảo",
+      "ngaySinh": "05/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008421",
+      "hoTen": "Thái Gia Bảo",
+      "ngaySinh": "19/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008429",
+      "hoTen": "Nguyễn Long Biên",
+      "ngaySinh": "09/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008430",
+      "hoTen": "Nguyễn Văn Thái Bình",
+      "ngaySinh": "08/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008432",
+      "hoTen": "Trịnh Thị Diễm Bình",
+      "ngaySinh": "16/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008437",
+      "hoTen": "Lê Thị Quỳnh Chi",
+      "ngaySinh": "20/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008439",
+      "hoTen": "Nguyễn Thị Linh Chi",
+      "ngaySinh": "14/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 368,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009105",
+      "hoTen": "Phan Thị Thanh Xuân",
+      "ngaySinh": "28/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 368,
+      "monTuChon": [
+        "diaLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008442",
+      "hoTen": "Nguyễn Thị Quỳnh Chi",
+      "ngaySinh": "24/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008452",
+      "hoTen": "Nguyễn Nam Cường",
+      "ngaySinh": "26/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008454",
+      "hoTen": "Nguyễn Mạnh Dân",
+      "ngaySinh": "18/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008457",
+      "hoTen": "Phạm Hồng Diệp",
+      "ngaySinh": "13/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008468",
+      "hoTen": "Hoàng Quốc Dũng",
+      "ngaySinh": "08/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008470",
+      "hoTen": "Lê Đình Dũng",
+      "ngaySinh": "06/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008477",
+      "hoTen": "Nguyễn Văn Dũng",
+      "ngaySinh": "14/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008479",
+      "hoTen": "Phạm Nguyễn Tiến Dũng",
+      "ngaySinh": "24/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008494",
+      "hoTen": "Nguyễn Sỹ Dương",
+      "ngaySinh": "15/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008498",
+      "hoTen": "Nguyễn Văn Dương",
+      "ngaySinh": "25/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008499",
+      "hoTen": "Võ Thị Ánh Dương",
+      "ngaySinh": "10/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008500",
+      "hoTen": "Nguyễn Thời Đại",
+      "ngaySinh": "07/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008503",
+      "hoTen": "Nguyễn Lê Linh Đan",
+      "ngaySinh": "21/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008514",
+      "hoTen": "Từ Dương Đồng",
+      "ngaySinh": "03/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008518",
+      "hoTen": "Phan Đăng Đức",
+      "ngaySinh": "30/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008523",
+      "hoTen": "Nguyễn Thị Giang",
+      "ngaySinh": "03/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008537",
+      "hoTen": "Hoàng Ngọc Hà",
+      "ngaySinh": "08/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008544",
+      "hoTen": "Nguyễn Thị Thu Hà",
+      "ngaySinh": "05/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008548",
+      "hoTen": "Trần Thị Ngọc Hà",
+      "ngaySinh": "13/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008550",
+      "hoTen": "Lê Duy Hải",
+      "ngaySinh": "14/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008553",
+      "hoTen": "Võ Ngọc Hải",
+      "ngaySinh": "05/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008566",
+      "hoTen": "Ngô Thị Diệu Hiền",
+      "ngaySinh": "12/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008567",
+      "hoTen": "Nguyễn Ánh Hiền",
+      "ngaySinh": "15/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008578",
+      "hoTen": "Nguyễn Văn Hiệp",
+      "ngaySinh": "03/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 369,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008584",
+      "hoTen": "Nguyễn Minh Hiếu",
+      "ngaySinh": "30/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008593",
+      "hoTen": "Nguyễn Trọng Hoài",
+      "ngaySinh": "20/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008595",
+      "hoTen": "Lê Đình Nhật Hoàng",
+      "ngaySinh": "08/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008596",
+      "hoTen": "Lê Hữu Hoàng",
+      "ngaySinh": "05/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008599",
+      "hoTen": "Nguyễn Bảo Hoàng",
+      "ngaySinh": "18/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008600",
+      "hoTen": "Nguyễn Danh Hoàng",
+      "ngaySinh": "21/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008604",
+      "hoTen": "Nguyễn Lê Hoàng",
+      "ngaySinh": "23/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008608",
+      "hoTen": "Phan Danh Hoàng",
+      "ngaySinh": "05/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008610",
+      "hoTen": "Trần Huy Hoàng",
+      "ngaySinh": "27/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008611",
+      "hoTen": "Trần Việt Hoàng",
+      "ngaySinh": "09/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008612",
+      "hoTen": "Trần Xuân Hoàng",
+      "ngaySinh": "28/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008614",
+      "hoTen": "Nguyễn Huy Hoằng",
+      "ngaySinh": "23/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008616",
+      "hoTen": "Trịnh Thị Hồng Huế",
+      "ngaySinh": "21/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008620",
+      "hoTen": "Thái Tuấn Hùng",
+      "ngaySinh": "02/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008623",
+      "hoTen": "Lê Nhật Huy",
+      "ngaySinh": "13/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008624",
+      "hoTen": "Ngô Văn Huy",
+      "ngaySinh": "21/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008628",
+      "hoTen": "Nguyễn Trung Ngọc Huy",
+      "ngaySinh": "25/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008633",
+      "hoTen": "Nguyễn Khánh Huyền",
+      "ngaySinh": "14/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008635",
+      "hoTen": "Nguyễn Thị Cẩm Huyền",
+      "ngaySinh": "22/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008643",
+      "hoTen": "Phan Nguyễn Khánh Huyền",
+      "ngaySinh": "04/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008648",
+      "hoTen": "Trần Thị Khánh Huyền",
+      "ngaySinh": "20/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008651",
+      "hoTen": "Lâm Gia Hưng",
+      "ngaySinh": "01/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008655",
+      "hoTen": "Phan Bá Gia Hưng",
+      "ngaySinh": "10/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 370,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008656",
+      "hoTen": "Trần Tuấn Hưng",
+      "ngaySinh": "17/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008660",
+      "hoTen": "Phan Thế Khải",
+      "ngaySinh": "12/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008662",
+      "hoTen": "Nguyễn Trọng Khang",
+      "ngaySinh": "12/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008663",
+      "hoTen": "Nguyễn Văn Bảo Khang",
+      "ngaySinh": "23/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008664",
+      "hoTen": "Phan Mạnh Khang",
+      "ngaySinh": "18/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008669",
+      "hoTen": "Nguyễn Sỹ Khánh",
+      "ngaySinh": "18/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008673",
+      "hoTen": "Trần Quốc Khánh",
+      "ngaySinh": "23/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008679",
+      "hoTen": "Nguyễn Hữu Mạnh Kiên",
+      "ngaySinh": "25/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008688",
+      "hoTen": "Hoàng Trúc Linh",
+      "ngaySinh": "14/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008693",
+      "hoTen": "Nguyễn Hoàng Linh",
+      "ngaySinh": "13/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008725",
+      "hoTen": "Phan Đăng Long",
+      "ngaySinh": "30/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008741",
+      "hoTen": "Nguyễn Thị Ngọc Mai",
+      "ngaySinh": "19/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008744",
+      "hoTen": "Dương Đức Mạnh",
+      "ngaySinh": "16/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008745",
+      "hoTen": "Đặng Hữu Mạnh",
+      "ngaySinh": "07/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008747",
+      "hoTen": "Nguyễn Quang Mạnh",
+      "ngaySinh": "20/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008752",
+      "hoTen": "Hoàng Nhật Minh",
+      "ngaySinh": "11/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008755",
+      "hoTen": "Nguyễn Phi Gia Minh",
+      "ngaySinh": "17/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008766",
+      "hoTen": "Nguyễn Thị Trà My",
+      "ngaySinh": "24/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008769",
+      "hoTen": "Bùi Thị Na",
+      "ngaySinh": "13/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008770",
+      "hoTen": "Đào Thị Lê Na",
+      "ngaySinh": "02/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008778",
+      "hoTen": "Nguyễn Văn Tuấn Nam",
+      "ngaySinh": "23/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008780",
+      "hoTen": "Phạm Bảo Nam",
+      "ngaySinh": "06/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 371,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008781",
+      "hoTen": "Phan Tất Hà Nam",
+      "ngaySinh": "16/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008782",
+      "hoTen": "Nguyễn Thị Hằng Nga",
+      "ngaySinh": "06/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008786",
+      "hoTen": "Trần Thị Ngà",
+      "ngaySinh": "24/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008787",
+      "hoTen": "Lê Thị Hà Ngân",
+      "ngaySinh": "21/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008797",
+      "hoTen": "Lê Văn Tuấn Nghĩa",
+      "ngaySinh": "23/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008798",
+      "hoTen": "Nguyễn Minh Nghĩa",
+      "ngaySinh": "12/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008800",
+      "hoTen": "Đặng Thị Bảo Ngọc",
+      "ngaySinh": "06/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008808",
+      "hoTen": "Trần Như Ngọc",
+      "ngaySinh": "06/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008812",
+      "hoTen": "Nguyễn Thị Thảo Nguyên",
+      "ngaySinh": "01/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008813",
+      "hoTen": "Trương Công Hoàng Nguyên",
+      "ngaySinh": "24/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008815",
+      "hoTen": "Trương Vũ Thảo Nguyên",
+      "ngaySinh": "01/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008816",
+      "hoTen": "Phan Thị Nguyệt",
+      "ngaySinh": "04/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008820",
+      "hoTen": "Nguyễn Công Nhật",
+      "ngaySinh": "10/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008823",
+      "hoTen": "Trần Công Nhật",
+      "ngaySinh": "31/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008824",
+      "hoTen": "Trần Quang Nhật",
+      "ngaySinh": "24/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008825",
+      "hoTen": "Trương Văn Quốc Nhật",
+      "ngaySinh": "16/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008832",
+      "hoTen": "Nguyễn Thị Uyên Nhi",
+      "ngaySinh": "18/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008833",
+      "hoTen": "Nguyễn Thị Yến Nhi",
+      "ngaySinh": "13/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008834",
+      "hoTen": "Nguyễn Thị Yến Nhi",
+      "ngaySinh": "17/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008840",
+      "hoTen": "Hồ Thị Cẩm Nhung",
+      "ngaySinh": "11/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008845",
+      "hoTen": "Nguyễn Thị Hồng Nhung",
+      "ngaySinh": "28/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008847",
+      "hoTen": "Lê Thị Quỳnh Như",
+      "ngaySinh": "10/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008857",
+      "hoTen": "Nguyễn Thị Kim Oanh",
+      "ngaySinh": "14/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 372,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008856",
+      "hoTen": "Nguyễn Thị Kim Oanh",
+      "ngaySinh": "04/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008858",
+      "hoTen": "Nguyễn Thị Oanh",
+      "ngaySinh": "13/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008860",
+      "hoTen": "Thân Văn Phi",
+      "ngaySinh": "01/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008861",
+      "hoTen": "Bùi Tuấn Phong",
+      "ngaySinh": "07/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008866",
+      "hoTen": "Nguyễn Công Phu",
+      "ngaySinh": "15/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008869",
+      "hoTen": "Nguyễn Viết Phú",
+      "ngaySinh": "10/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008870",
+      "hoTen": "Nguyễn Hoàng Phúc",
+      "ngaySinh": "04/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008871",
+      "hoTen": "Nguyễn Hồng Phúc",
+      "ngaySinh": "20/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008872",
+      "hoTen": "Nguyễn Sỹ Bảo Phúc",
+      "ngaySinh": "20/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008879",
+      "hoTen": "Nguyễn Thị Diễm Phương",
+      "ngaySinh": "02/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008882",
+      "hoTen": "Nguyễn Xuân Phương",
+      "ngaySinh": "11/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008890",
+      "hoTen": "Phạm Thị Ngọc Phượng",
+      "ngaySinh": "02/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008892",
+      "hoTen": "Lê Minh Quân",
+      "ngaySinh": "31/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008904",
+      "hoTen": "Lê Đức Quý",
+      "ngaySinh": "15/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008908",
+      "hoTen": "Phạm Văn Quyền",
+      "ngaySinh": "16/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008909",
+      "hoTen": "Từ Văn Quyết",
+      "ngaySinh": "17/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008912",
+      "hoTen": "Nguyễn Thị Như Quỳnh",
+      "ngaySinh": "03/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008917",
+      "hoTen": "Võ Thị Diễm Quỳnh",
+      "ngaySinh": "16/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008919",
+      "hoTen": "Nguyễn Gia Sang",
+      "ngaySinh": "11/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008921",
+      "hoTen": "Lê Hữu Minh Sáng",
+      "ngaySinh": "16/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008923",
+      "hoTen": "Bùi Văn Sơn",
+      "ngaySinh": "09/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008930",
+      "hoTen": "Nguyễn Văn Tài",
+      "ngaySinh": "30/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008938",
+      "hoTen": "Hoàng Thị Phương Thanh",
+      "ngaySinh": "23/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 373,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008939",
+      "hoTen": "Đậu Kim Minh Thành",
+      "ngaySinh": "10/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008942",
+      "hoTen": "Nguyễn Viết Thành",
+      "ngaySinh": "28/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008944",
+      "hoTen": "Trần Hậu Nguyên Thành",
+      "ngaySinh": "15/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008947",
+      "hoTen": "Võ Tá Nhật Thành",
+      "ngaySinh": "05/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008948",
+      "hoTen": "Lê Nguyễn An Thảo",
+      "ngaySinh": "08/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008950",
+      "hoTen": "Nguyễn Phương Thảo",
+      "ngaySinh": "28/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008953",
+      "hoTen": "Trương Thị Phương Thảo",
+      "ngaySinh": "21/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008954",
+      "hoTen": "Nguyễn Thị Hồng Thắm",
+      "ngaySinh": "06/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008961",
+      "hoTen": "Trần Đình Thiên Thể",
+      "ngaySinh": "24/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008964",
+      "hoTen": "Đoàn Văn Anh Thông",
+      "ngaySinh": "08/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008967",
+      "hoTen": "Trần Mạnh Thông",
+      "ngaySinh": "25/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008977",
+      "hoTen": "Ngô Thị Anh Thư",
+      "ngaySinh": "03/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008978",
+      "hoTen": "Nguyễn Anh Thư",
+      "ngaySinh": "26/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008988",
+      "hoTen": "Nguyễn Thị Thương",
+      "ngaySinh": "16/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008990",
+      "hoTen": "Trần Thị Hoài Thương",
+      "ngaySinh": "10/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008996",
+      "hoTen": "Lê Đình Bảo Toàn",
+      "ngaySinh": "05/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009006",
+      "hoTen": "Đoàn Phạm Hoài Trang",
+      "ngaySinh": "18/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009008",
+      "hoTen": "Lê Thị Huyền Trang",
+      "ngaySinh": "12/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009031",
+      "hoTen": "Lê Thị Huyền Trân",
+      "ngaySinh": "17/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009039",
+      "hoTen": "Lê Thành Trung",
+      "ngaySinh": "23/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009040",
+      "hoTen": "Nguyễn Danh Thành Trung",
+      "ngaySinh": "05/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009044",
+      "hoTen": "Nguyễn Lam Trường",
+      "ngaySinh": "08/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 374,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008366",
+      "hoTen": "Bùi Nguyễn Duy Anh",
+      "ngaySinh": "19/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008374",
+      "hoTen": "Nguyễn Ngọc Anh",
+      "ngaySinh": "24/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008379",
+      "hoTen": "Nguyễn Quỳnh Anh",
+      "ngaySinh": "12/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008389",
+      "hoTen": "Nguyễn Tú Anh",
+      "ngaySinh": "20/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008396",
+      "hoTen": "Quách Quỳnh Anh",
+      "ngaySinh": "23/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008400",
+      "hoTen": "Vũ Thị Phương Anh",
+      "ngaySinh": "04/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008403",
+      "hoTen": "Ngô Thị Ánh",
+      "ngaySinh": "21/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008407",
+      "hoTen": "Phạm Ngọc Ánh",
+      "ngaySinh": "16/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008425",
+      "hoTen": "Nguyễn Công Bắc",
+      "ngaySinh": "09/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A11",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008438",
+      "hoTen": "Nguyễn Phương  Chi",
+      "ngaySinh": "11/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008443",
+      "hoTen": "Nguyễn Trần Quỳnh Chi",
+      "ngaySinh": "04/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008456",
+      "hoTen": "Nguyễn Thị Ngọc Diệp",
+      "ngaySinh": "25/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 375,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009049",
+      "hoTen": "Lê Thị Cẩm Tú",
+      "ngaySinh": "26/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009051",
+      "hoTen": "Nguyễn Kim Tuấn Tú",
+      "ngaySinh": "14/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009057",
+      "hoTen": "Hoàng Bùi Tuệ",
+      "ngaySinh": "23/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009063",
+      "hoTen": "Nguyễn Thị Tuyết",
+      "ngaySinh": "20/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009070",
+      "hoTen": "Nguyễn Thị Minh Vân",
+      "ngaySinh": "22/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009078",
+      "hoTen": "Nguyễn Quốc Việt",
+      "ngaySinh": "04/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009081",
+      "hoTen": "Nguyễn Trọng Vũ",
+      "ngaySinh": "19/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009083",
+      "hoTen": "Nguyễn Viết Hoàng Vũ",
+      "ngaySinh": "28/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A6",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009099",
+      "hoTen": "Trương Thị Thảo Vy",
+      "ngaySinh": "30/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009109",
+      "hoTen": "Phan Thị Như Yến",
+      "ngaySinh": "06/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 375,
+      "monTuChon": [
+        "vatLy",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008496",
+      "hoTen": "Nguyễn Thuỳ Dương",
+      "ngaySinh": "03/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008516",
+      "hoTen": "Nguyễn Trí Đức",
+      "ngaySinh": "01/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008527",
+      "hoTen": "Nguyễn Thị Hương Giang",
+      "ngaySinh": "14/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008533",
+      "hoTen": "Nguyễn Thị Trà Giang",
+      "ngaySinh": "07/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008534",
+      "hoTen": "Võ Thị Hương Giang",
+      "ngaySinh": "19/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008540",
+      "hoTen": "Lê Việt Hà",
+      "ngaySinh": "09/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008543",
+      "hoTen": "Nguyễn Thị Ngọc Hà",
+      "ngaySinh": "16/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008551",
+      "hoTen": "Nguyễn Hoàng Hải",
+      "ngaySinh": "16/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008557",
+      "hoTen": "Đặng Lê Bảo Hằng",
+      "ngaySinh": "17/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008590",
+      "hoTen": "Phan Nữ Quỳnh Hoa",
+      "ngaySinh": "01/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008591",
+      "hoTen": "Nguyễn Thị Khánh Hòa",
+      "ngaySinh": "02/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008605",
+      "hoTen": "Nguyễn Minh Hoàng",
+      "ngaySinh": "26/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008630",
+      "hoTen": "Lê Thảo Huyền",
+      "ngaySinh": "12/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008632",
+      "hoTen": "Nguyễn Khánh Huyền",
+      "ngaySinh": "05/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008634",
+      "hoTen": "Nguyễn Lê Khánh Huyền",
+      "ngaySinh": "24/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008654",
+      "hoTen": "Nguyễn Lê Gia Hưng",
+      "ngaySinh": "02/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008666",
+      "hoTen": "Võ Trường Khang",
+      "ngaySinh": "01/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008667",
+      "hoTen": "Nguyễn Đặng Bảo Khánh",
+      "ngaySinh": "05/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008686",
+      "hoTen": "Trần Lê",
+      "ngaySinh": "21/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008694",
+      "hoTen": "Nguyễn Khánh Linh",
+      "ngaySinh": "21/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008696",
+      "hoTen": "Nguyễn Phan Khánh Linh",
+      "ngaySinh": "27/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008701",
+      "hoTen": "Nguyễn Thị Khánh Linh",
+      "ngaySinh": "19/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 376,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008708",
+      "hoTen": "Phạm Hàn Diệu Linh",
+      "ngaySinh": "17/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008711",
+      "hoTen": "Phan Hà Linh",
+      "ngaySinh": "15/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008717",
+      "hoTen": "Trần Thị Khánh Linh",
+      "ngaySinh": "10/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008718",
+      "hoTen": "Trương Thảo Linh",
+      "ngaySinh": "16/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008719",
+      "hoTen": "Võ Mai Hà Linh",
+      "ngaySinh": "02/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008723",
+      "hoTen": "Nguyễn Hữu Long",
+      "ngaySinh": "26/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008733",
+      "hoTen": "Nguyễn Ngọc Bảo Ly",
+      "ngaySinh": "28/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008734",
+      "hoTen": "Nguyễn Thảo Ly",
+      "ngaySinh": "05/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008738",
+      "hoTen": "Phan Nguyễn Khánh Ly",
+      "ngaySinh": "06/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008748",
+      "hoTen": "Nguyễn Văn Đức Mạnh",
+      "ngaySinh": "12/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008751",
+      "hoTen": "Đoàn Ngọc Minh",
+      "ngaySinh": "17/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008760",
+      "hoTen": "Bùi Thị Khánh My",
+      "ngaySinh": "09/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008761",
+      "hoTen": "Hồ Thị Thảo My",
+      "ngaySinh": "10/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008763",
+      "hoTen": "Lê Thị Trà My",
+      "ngaySinh": "11/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008768",
+      "hoTen": "Đồng Thị Nhật Mỹ",
+      "ngaySinh": "01/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008771",
+      "hoTen": "Nguyễn Lê Na",
+      "ngaySinh": "10/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008785",
+      "hoTen": "Trần Phương Nga",
+      "ngaySinh": "13/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008792",
+      "hoTen": "Nguyễn Thị Kim Ngân",
+      "ngaySinh": "28/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008794",
+      "hoTen": "Nguyễn Trần Quỳnh Ngân",
+      "ngaySinh": "07/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008795",
+      "hoTen": "Trần Dương Khánh Ngân",
+      "ngaySinh": "02/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008801",
+      "hoTen": "Lê Thị Bảo Ngọc",
+      "ngaySinh": "18/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008803",
+      "hoTen": "Nguyễn Thị Bảo Ngọc",
+      "ngaySinh": "10/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008826",
+      "hoTen": "Lê Thị Yến Nhi",
+      "ngaySinh": "19/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008827",
+      "hoTen": "Lê Yến Nhi",
+      "ngaySinh": "03/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 377,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008829",
+      "hoTen": "Nguyễn Đan Nhi",
+      "ngaySinh": "01/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008831",
+      "hoTen": "Nguyễn Thị Ngọc Nhi",
+      "ngaySinh": "02/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008835",
+      "hoTen": "Nguyễn Thị Yến Nhi",
+      "ngaySinh": "20/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008836",
+      "hoTen": "Phùng Gia Nhi",
+      "ngaySinh": "28/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008850",
+      "hoTen": "Nguyễn Thị Yến Như",
+      "ngaySinh": "14/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008851",
+      "hoTen": "Trần Thị Quỳnh Như",
+      "ngaySinh": "15/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008855",
+      "hoTen": "Lê Dương Oanh",
+      "ngaySinh": "12/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008876",
+      "hoTen": "Đặng Thị Hoài Phương",
+      "ngaySinh": "06/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008886",
+      "hoTen": "Trần Tô Hà Phương",
+      "ngaySinh": "29/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008887",
+      "hoTen": "Trương Thị Khánh Phương",
+      "ngaySinh": "07/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008927",
+      "hoTen": "Lê Thị Sương",
+      "ngaySinh": "04/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008932",
+      "hoTen": "Ngô Thế Tâm",
+      "ngaySinh": "17/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008933",
+      "hoTen": "Nguyễn Bảo Thanh Tâm",
+      "ngaySinh": "14/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008934",
+      "hoTen": "Phan Thị Mỹ Tâm",
+      "ngaySinh": "08/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008981",
+      "hoTen": "Nguyễn Trần Khánh Thư",
+      "ngaySinh": "08/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008983",
+      "hoTen": "Phạm Thị Anh Thư",
+      "ngaySinh": "04/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008989",
+      "hoTen": "Phan Hoài Thương",
+      "ngaySinh": "21/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008994",
+      "hoTen": "Nguyễn Quốc Tiến",
+      "ngaySinh": "07/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009012",
+      "hoTen": "Nguyễn Hà Trang",
+      "ngaySinh": "13/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009013",
+      "hoTen": "Nguyễn Huyền Trang",
+      "ngaySinh": "26/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009015",
+      "hoTen": "Nguyễn Thị Huyền Trang",
+      "ngaySinh": "04/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009027",
+      "hoTen": "Nguyễn Ngọc Bảo Trâm",
+      "ngaySinh": "22/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009028",
+      "hoTen": "Nguyễn Thị Hạ Trâm",
+      "ngaySinh": "28/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009033",
+      "hoTen": "Lê Huyền Trinh",
+      "ngaySinh": "09/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 378,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008356",
+      "hoTen": "Trần Đình Ái",
+      "ngaySinh": "02/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008365",
+      "hoTen": "Trần Thị Hoài An",
+      "ngaySinh": "28/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008383",
+      "hoTen": "Nguyễn Thị Phương Anh",
+      "ngaySinh": "39694",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008399",
+      "hoTen": "Võ Thị Hiền Anh",
+      "ngaySinh": "03/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008406",
+      "hoTen": "Nguyễn Thị Ngọc Ánh",
+      "ngaySinh": "11/3/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008419",
+      "hoTen": "Nguyễn Viết Gia Bảo",
+      "ngaySinh": "03/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008427",
+      "hoTen": "Phún Ngọc Khánh Băng",
+      "ngaySinh": "15/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008459",
+      "hoTen": "Đặng Ánh Diệu",
+      "ngaySinh": "05/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008461",
+      "hoTen": "Nguyễn Văn Doãn",
+      "ngaySinh": "03/4/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008466",
+      "hoTen": "Trần Thị Linh Dung",
+      "ngaySinh": "13/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008475",
+      "hoTen": "Nguyễn Tiến Dũng",
+      "ngaySinh": "18/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008478",
+      "hoTen": "Nguyễn Văn Dũng",
+      "ngaySinh": "19/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008485",
+      "hoTen": "Nguyễn Ánh Duy",
+      "ngaySinh": "06/9/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008526",
+      "hoTen": "Nguyễn Thị Hương Giang",
+      "ngaySinh": "06/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008536",
+      "hoTen": "Nguyễn Văn Giáp",
+      "ngaySinh": "09/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008552",
+      "hoTen": "Nguyên Thị Hồng Hải",
+      "ngaySinh": "20/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008561",
+      "hoTen": "Nguyễn Thúy Hằng",
+      "ngaySinh": "08/6/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A13",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008569",
+      "hoTen": "Nguyễn Thị Thu Hiền",
+      "ngaySinh": "22/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009043",
+      "hoTen": "Mai Nhật Trường",
+      "ngaySinh": "22/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A3",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009060",
+      "hoTen": "Phạm Xuân Tùng",
+      "ngaySinh": "28/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009069",
+      "hoTen": "Nguyễn Thị Khánh Vân",
+      "ngaySinh": "15/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009075",
+      "hoTen": "Nguyễn Thị Hà Vi",
+      "ngaySinh": "14/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009094",
+      "hoTen": "Nguyễn Hà Vy",
+      "ngaySinh": "29/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009102",
+      "hoTen": "Nguyễn Văn Vỹ",
+      "ngaySinh": "21/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A4",
+      "phongThi": 379,
+      "monTuChon": [
+        "diaLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008592",
+      "hoTen": "Nguyễn Thị Thu Hoài",
+      "ngaySinh": "02/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008622",
+      "hoTen": "Hoàng Văn Quốc Huy",
+      "ngaySinh": "19/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A13",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008631",
+      "hoTen": "Mai Thị Khánh Huyền",
+      "ngaySinh": "14/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008646",
+      "hoTen": "Trần Thị Khánh Huyền",
+      "ngaySinh": "12/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008650",
+      "hoTen": "Võ Hoàng Huỳnh",
+      "ngaySinh": "30/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008670",
+      "hoTen": "Nguyễn Thị Vân Khánh",
+      "ngaySinh": "12/4/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A13",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008698",
+      "hoTen": "Nguyễn Thị Diệu Linh",
+      "ngaySinh": "18/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008699",
+      "hoTen": "Nguyễn Thị Hà Linh",
+      "ngaySinh": "20/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008720",
+      "hoTen": "Võ Thị Hà Linh",
+      "ngaySinh": "18/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008728",
+      "hoTen": "Phạm Hữu Lộc",
+      "ngaySinh": "05/9/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A13",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008729",
+      "hoTen": "Ngô Sỹ Luân",
+      "ngaySinh": "08/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008737",
+      "hoTen": "Phạm Thị Khánh Ly",
+      "ngaySinh": "29/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008750",
+      "hoTen": "Nguyễn Thị Hương May",
+      "ngaySinh": "11/7/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A13",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008819",
+      "hoTen": "Lê Đình Nhật",
+      "ngaySinh": "11/10/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008822",
+      "hoTen": "Nguyễn Viết Nhật",
+      "ngaySinh": "24/10/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008838",
+      "hoTen": "Vương Thị Linh Nhi",
+      "ngaySinh": "04/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008844",
+      "hoTen": "Nguyễn Thị Hồng Nhung",
+      "ngaySinh": "08/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008852",
+      "hoTen": "Trương Tâm Như",
+      "ngaySinh": "19/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "ngoaiNgu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008854",
+      "hoTen": "Trần Thị Khánh Ninh",
+      "ngaySinh": "30/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008864",
+      "hoTen": "Nguyễn Văn Phong",
+      "ngaySinh": "28/8/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008888",
+      "hoTen": "Võ Lê Mai Phương",
+      "ngaySinh": "10/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008910",
+      "hoTen": "Nguyễn Thị Diễm Quỳnh",
+      "ngaySinh": "22/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008914",
+      "hoTen": "Nguyễn Thị Như Quỳnh",
+      "ngaySinh": "13/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008916",
+      "hoTen": "Trần Thị Thanh Quỳnh",
+      "ngaySinh": "04/9/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 380,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008920",
+      "hoTen": "Nguyễn Hoàng Sang",
+      "ngaySinh": "07/5/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008951",
+      "hoTen": "Nguyễn Thị Phương Thảo",
+      "ngaySinh": "24/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008970",
+      "hoTen": "Phạm Minh Thục",
+      "ngaySinh": "01/3/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008972",
+      "hoTen": "Hoàng Thị Thu Thủy",
+      "ngaySinh": "10/7/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008980",
+      "hoTen": "Nguyễn Thị Anh Thư",
+      "ngaySinh": "04/01/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008985",
+      "hoTen": "Nguyễn Hoài Thương",
+      "ngaySinh": "25/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008998",
+      "hoTen": "Phạm Khánh Toàn",
+      "ngaySinh": "03/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A11",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008999",
+      "hoTen": "Đậu Xuân Toản",
+      "ngaySinh": "19/8/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009009",
+      "hoTen": "Lê Thị Thùy Trang",
+      "ngaySinh": "13/8/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009017",
+      "hoTen": "Nguyễn Thị Huyền Trang",
+      "ngaySinh": "17/10/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009019",
+      "hoTen": "Nguyễn Thị Trang",
+      "ngaySinh": "17/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009024",
+      "hoTen": "Trần Thị Hà Trang",
+      "ngaySinh": "04/12/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009029",
+      "hoTen": "Trần Thị Bảo Trâm",
+      "ngaySinh": "31/3/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009036",
+      "hoTen": "Phan Thị Kiều Trinh",
+      "ngaySinh": "20/8/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009056",
+      "hoTen": "Nguyễn Quốc Tuấn",
+      "ngaySinh": "20/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009066",
+      "hoTen": "Nguyễn Thảo Uyên",
+      "ngaySinh": "12/9/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009073",
+      "hoTen": "Từ Thị Cẩm Vân",
+      "ngaySinh": "04/9/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009100",
+      "hoTen": "Nguyễn Trí Vỹ",
+      "ngaySinh": "03/3/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009101",
+      "hoTen": "Nguyễn Trường Vỹ",
+      "ngaySinh": "05/6/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009103",
+      "hoTen": "Hoàng Thị Xuân",
+      "ngaySinh": "04/02/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009106",
+      "hoTen": "Nguyễn Gia Như Ý",
+      "ngaySinh": "19/8/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009107",
+      "hoTen": "Đào Thị Hải Yến",
+      "ngaySinh": "18/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009108",
+      "hoTen": "Phan Hải Yến",
+      "ngaySinh": "14/4/2008",
+      "gioiTinh": "",
+      "lop": "12A13",
+      "phongThi": 381,
+      "monTuChon": [
+        "diaLy",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008359",
+      "hoTen": "Nguyễn Quốc An",
+      "ngaySinh": "11/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008376",
+      "hoTen": "Nguyễn Ngọc Phương Anh",
+      "ngaySinh": "19/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008391",
+      "hoTen": "Nguyễn Tuấn Anh",
+      "ngaySinh": "17/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008397",
+      "hoTen": "Trần Đức Anh",
+      "ngaySinh": "03/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008417",
+      "hoTen": "Nguyễn Thạch Gia Bảo",
+      "ngaySinh": "25/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008451",
+      "hoTen": "Lê Duy Cường",
+      "ngaySinh": "02/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008495",
+      "hoTen": "Nguyễn Thị Thùy Dương",
+      "ngaySinh": "31/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008497",
+      "hoTen": "Nguyễn Tùng Dương",
+      "ngaySinh": "27/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008509",
+      "hoTen": "Nguyễn Minh Đăng",
+      "ngaySinh": "24/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008513",
+      "hoTen": "Nguyễn Văn Thành Đồng",
+      "ngaySinh": "28/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008564",
+      "hoTen": "Nguyễn Văn Hậu",
+      "ngaySinh": "01/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008587",
+      "hoTen": "Võ Tá Bảo Hiếu",
+      "ngaySinh": "04/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008602",
+      "hoTen": "Nguyễn Huy Hoàng",
+      "ngaySinh": "16/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008607",
+      "hoTen": "Nguyễn Văn Hoàng",
+      "ngaySinh": "14/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008626",
+      "hoTen": "Nguyễn Hữu Huy",
+      "ngaySinh": "09/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008661",
+      "hoTen": "Đặng Sỹ Lê Khang",
+      "ngaySinh": "05/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008680",
+      "hoTen": "Từ Anh Kiệt",
+      "ngaySinh": "18/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008681",
+      "hoTen": "Thái Khánh Lam",
+      "ngaySinh": "10/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 382,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008706",
+      "hoTen": "Nguyễn Thị Thùy Linh",
+      "ngaySinh": "21/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008712",
+      "hoTen": "Phan Thị Khánh Linh",
+      "ngaySinh": "17/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008722",
+      "hoTen": "Lê Trần Hoàng Long",
+      "ngaySinh": "14/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008724",
+      "hoTen": "Nguyễn Thành Long",
+      "ngaySinh": "05/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008732",
+      "hoTen": "Dương Gia Cát Lượng",
+      "ngaySinh": "07/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008749",
+      "hoTen": "Trần Đức Mạnh",
+      "ngaySinh": "20/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008757",
+      "hoTen": "Nguyễn Văn Quang Minh",
+      "ngaySinh": "22/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008764",
+      "hoTen": "Lê Thị Trà My",
+      "ngaySinh": "23/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008765",
+      "hoTen": "Nguyễn Thị Trà My",
+      "ngaySinh": "22/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008796",
+      "hoTen": "Hồ Phan Thế Nghị",
+      "ngaySinh": "29/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008810",
+      "hoTen": "Nguyễn Đức Nguyên",
+      "ngaySinh": "07/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008814",
+      "hoTen": "Trương Thị Thảo Nguyên",
+      "ngaySinh": "03/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008837",
+      "hoTen": "Trần Gia Nhi",
+      "ngaySinh": "30/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008862",
+      "hoTen": "Nguyễn Nhật Phong",
+      "ngaySinh": "20/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A7",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008868",
+      "hoTen": "Nguyễn Văn Bảo Phú",
+      "ngaySinh": "12/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008878",
+      "hoTen": "Nguyễn Thái Phương",
+      "ngaySinh": "16/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008894",
+      "hoTen": "Nguyễn Minh Quân",
+      "ngaySinh": "13/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008900",
+      "hoTen": "Đặng Hữu Bảo Quốc",
+      "ngaySinh": "23/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008905",
+      "hoTen": "Lê Phan Diệu Quyên",
+      "ngaySinh": "19/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008907",
+      "hoTen": "Phạm Hữu Quyền",
+      "ngaySinh": "06/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008936",
+      "hoTen": "Nguyễn Mậu Mạnh Tân",
+      "ngaySinh": "11/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008943",
+      "hoTen": "Trần Bảo Thành",
+      "ngaySinh": "19/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008946",
+      "hoTen": "Trịnh Công Thành",
+      "ngaySinh": "06/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 383,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008361",
+      "hoTen": "Nguyễn Thị Thuý An",
+      "ngaySinh": "12/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008362",
+      "hoTen": "Nguyễn Thị Thúy An",
+      "ngaySinh": "26/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008369",
+      "hoTen": "Đặng Thùy Anh",
+      "ngaySinh": "09/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008444",
+      "hoTen": "Trần Mai Chi",
+      "ngaySinh": "06/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008460",
+      "hoTen": "Nguyễn Thị Huyền Diệu",
+      "ngaySinh": "25/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008504",
+      "hoTen": "Nguyễn Tiến Đàn",
+      "ngaySinh": "25/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008530",
+      "hoTen": "Nguyễn Thị Quỳnh Giang",
+      "ngaySinh": "18/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008541",
+      "hoTen": "Nguyễn Thanh Hà",
+      "ngaySinh": "22/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008546",
+      "hoTen": "Phạm Thị Hải Hà",
+      "ngaySinh": "13/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008562",
+      "hoTen": "Nguyễn Công Hân",
+      "ngaySinh": "14/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008586",
+      "hoTen": "Trần Văn Đức Hiếu",
+      "ngaySinh": "23/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008598",
+      "hoTen": "Nguyễn Bá Huy Hoàng",
+      "ngaySinh": "06/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 384,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008979",
+      "hoTen": "Nguyễn Thị Anh Thư",
+      "ngaySinh": "02/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008984",
+      "hoTen": "Trương Thị Quỳnh Thư",
+      "ngaySinh": "02/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009018",
+      "hoTen": "Nguyễn Thị Thùy Trang",
+      "ngaySinh": "29/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009021",
+      "hoTen": "Phan Thị Huyền Trang",
+      "ngaySinh": "20/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009026",
+      "hoTen": "Trần Thị Huyền Trang",
+      "ngaySinh": "24/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009042",
+      "hoTen": "Trương Xuân Trung",
+      "ngaySinh": "06/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A1",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009045",
+      "hoTen": "Nguyễn Văn Trường",
+      "ngaySinh": "13/07/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009047",
+      "hoTen": "Phạm Thiện Nam Trường",
+      "ngaySinh": "29/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42009098",
+      "hoTen": "Phạm Khánh Vy",
+      "ngaySinh": "18/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 384,
+      "monTuChon": [
+        "vatLy",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008424",
+      "hoTen": "Từ Bá Bảo",
+      "ngaySinh": "28/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 385,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008505",
+      "hoTen": "Nguyễn Văn Thành Đạt",
+      "ngaySinh": "14/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 385,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008575",
+      "hoTen": "Lê Đình Hiệp",
+      "ngaySinh": "16/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 385,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008625",
+      "hoTen": "Nguyễn Da Huy",
+      "ngaySinh": "03/08/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008629",
+      "hoTen": "Trần Đình Huy",
+      "ngaySinh": "07/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 385,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008639",
+      "hoTen": "Nguyễn Thị Thanh Huyền",
+      "ngaySinh": "04/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008658",
+      "hoTen": "Nguyễn Thùy Hương",
+      "ngaySinh": "03/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008675",
+      "hoTen": "Nguyễn Sỹ Khôi",
+      "ngaySinh": "03/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 385,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008678",
+      "hoTen": "Nguyễn Hoàng Kiên",
+      "ngaySinh": "23/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008682",
+      "hoTen": "Nguyễn Văn Lâm",
+      "ngaySinh": "15/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 385,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008687",
+      "hoTen": "Nguyễn Thị Kim Liên",
+      "ngaySinh": "15/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008691",
+      "hoTen": "Nguyễn Hà Linh",
+      "ngaySinh": "15/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008700",
+      "hoTen": "Nguyễn Thị Hoàng Linh",
+      "ngaySinh": "18/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008746",
+      "hoTen": "Nguyễn Hữu Mạnh",
+      "ngaySinh": "08/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008811",
+      "hoTen": "Nguyễn Phương Nguyên",
+      "ngaySinh": "14/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008821",
+      "hoTen": "Nguyễn Tuấn Nhật",
+      "ngaySinh": "17/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008891",
+      "hoTen": "Lê Minh Quân",
+      "ngaySinh": "10/01/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008945",
+      "hoTen": "Trần Xuân Thành",
+      "ngaySinh": "19/12/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008973",
+      "hoTen": "Đặng Thị Phương Thúy",
+      "ngaySinh": "23/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008976",
+      "hoTen": "Võ Thị Thúy",
+      "ngaySinh": "11/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009014",
+      "hoTen": "Nguyễn Quỳnh Trang",
+      "ngaySinh": "06/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A5",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009038",
+      "hoTen": "Nguyễn Ngọc Thanh Trúc",
+      "ngaySinh": "02/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009091",
+      "hoTen": "Hà Thị Phương Vy",
+      "ngaySinh": "16/11/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42009092",
+      "hoTen": "Lê Thảo Vy",
+      "ngaySinh": "17/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 385,
+      "monTuChon": [
+        "sinhHoc",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008480",
+      "hoTen": "Trần Nguyễn Tiến Dũng",
+      "ngaySinh": "31/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "diaLy"
+      ]
+    },
+    {
+      "sbd": "42008487",
+      "hoTen": "Trịnh Đình Hải Duy",
+      "ngaySinh": "23/03/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A11",
+      "phongThi": 386,
+      "monTuChon": [
+        "ngoaiNgu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008713",
+      "hoTen": "Phan Thị Khánh Linh",
+      "ngaySinh": "22/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 386,
+      "monTuChon": [
+        "ngoaiNgu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008740",
+      "hoTen": "Nguyễn Cẩm Mai",
+      "ngaySinh": "05/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008779",
+      "hoTen": "Nguyễn Viết Nam",
+      "ngaySinh": "09/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008784",
+      "hoTen": "Phan Thị Thúy Nga",
+      "ngaySinh": "27/09/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 386,
+      "monTuChon": [
+        "sinhHoc",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008789",
+      "hoTen": "Mai Hoàng Ngân",
+      "ngaySinh": "17/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 386,
+      "monTuChon": [
+        "ngoaiNgu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008896",
+      "hoTen": "Nguyễn Văn Quân",
+      "ngaySinh": "14/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008903",
+      "hoTen": "Nguyễn Văn Bảo Quốc",
+      "ngaySinh": "12/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 386,
+      "monTuChon": [
+        "sinhHoc",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008913",
+      "hoTen": "Nguyễn Thị Như Quỳnh",
+      "ngaySinh": "12/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 386,
+      "monTuChon": [
+        "ngoaiNgu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008928",
+      "hoTen": "Nguyễn Duy Tài",
+      "ngaySinh": "11/02/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008949",
+      "hoTen": "Lê Thị Thanh Thảo",
+      "ngaySinh": "29/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008952",
+      "hoTen": "Nguyễn Thị Thảo",
+      "ngaySinh": "13/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008956",
+      "hoTen": "Lê Văn Thắng",
+      "ngaySinh": "26/11/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 386,
+      "monTuChon": [
+        "sinhHoc",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008993",
+      "hoTen": "Võ Thị Thuỷ Tiên",
+      "ngaySinh": "05/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009001",
+      "hoTen": "Đào Đặng Tố",
+      "ngaySinh": "07/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A8",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009032",
+      "hoTen": "Lê Thị Huyền Trân",
+      "ngaySinh": "17/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A8",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009052",
+      "hoTen": "Phạm Thị Cẩm Tú",
+      "ngaySinh": "16/04/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 386,
+      "monTuChon": [
+        "ngoaiNgu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42009072",
+      "hoTen": "Phạm Thị Thảo Vân",
+      "ngaySinh": "13/10/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 386,
+      "monTuChon": [
+        "vatLy",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009077",
+      "hoTen": "Trần Thảo Vi",
+      "ngaySinh": "27/06/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A10",
+      "phongThi": 386,
+      "monTuChon": [
+        "sinhHoc",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42009096",
+      "hoTen": "Nguyễn Thị Thảo Vy",
+      "ngaySinh": "29/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 386,
+      "monTuChon": [
+        "ngoaiNgu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008367",
+      "hoTen": "Đặng Quỳnh Anh",
+      "ngaySinh": "15/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 387,
+      "monTuChon": [
+        "ngoaiNgu",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008368",
+      "hoTen": "Đặng Thị Ngọc Anh",
+      "ngaySinh": "01/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 387,
+      "monTuChon": [
+        "lichSu",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008445",
+      "hoTen": "Vương Thị Linh Chi",
+      "ngaySinh": "04/02/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 387,
+      "monTuChon": [
+        "diaLy"
+      ]
+    },
+    {
+      "sbd": "42008474",
+      "hoTen": "Nguyễn Thế Dũng",
+      "ngaySinh": "06/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 387,
+      "monTuChon": [
+        "sinhHoc",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008484",
+      "hoTen": "Mai Đức Duy",
+      "ngaySinh": "25/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A12",
+      "phongThi": 387,
+      "monTuChon": [
+        "lichSu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008486",
+      "hoTen": "Trần Hậu Duy",
+      "ngaySinh": "08/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 387,
+      "monTuChon": [
+        "lichSu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008555",
+      "hoTen": "Lê Thị Mỹ Hạnh",
+      "ngaySinh": "03/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 387,
+      "monTuChon": [
+        "diaLy"
+      ]
+    },
+    {
+      "sbd": "42008573",
+      "hoTen": "Từ Thị Thanh Hiền",
+      "ngaySinh": "07/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 387,
+      "monTuChon": [
+        "ngoaiNgu",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008609",
+      "hoTen": "Phan Văn Huy Hoàng",
+      "ngaySinh": "27/05/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 387,
+      "monTuChon": [
+        "lichSu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008613",
+      "hoTen": "Võ Sỹ Hoàng",
+      "ngaySinh": "18/09/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 387,
+      "monTuChon": [
+        "vatLy"
+      ]
+    },
+    {
+      "sbd": "42008640",
+      "hoTen": "Nguyễn Thị Thanh Huyền",
+      "ngaySinh": "16/01/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 387,
+      "monTuChon": [
+        "ngoaiNgu",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008652",
+      "hoTen": "Nguyễn Doãn Hưng",
+      "ngaySinh": "18/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A9",
+      "phongThi": 387,
+      "monTuChon": [
+        "vatLy"
+      ]
+    },
+    {
+      "sbd": "42008683",
+      "hoTen": "Phan Nhân Trần Lâm",
+      "ngaySinh": "23/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A12",
+      "phongThi": 387,
+      "monTuChon": [
+        "lichSu",
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008697",
+      "hoTen": "Nguyễn Thị Bảo Linh",
+      "ngaySinh": "03/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 387,
+      "monTuChon": [
+        "ngoaiNgu",
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008807",
+      "hoTen": "Trần Ánh Ngọc",
+      "ngaySinh": "24/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A3",
+      "phongThi": 387,
+      "monTuChon": [
+        "diaLy"
+      ]
+    },
+    {
+      "sbd": "42008880",
+      "hoTen": "Nguyễn Thị Hàn Phương",
+      "ngaySinh": "28/05/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A9",
+      "phongThi": 387,
+      "monTuChon": [
+        "lichSu",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008898",
+      "hoTen": "Trần Mạnh Quân",
+      "ngaySinh": "24/04/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 387,
+      "monTuChon": [
+        "sinhHoc",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008901",
+      "hoTen": "Lê Văn Quốc",
+      "ngaySinh": "21/10/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A5",
+      "phongThi": 387,
+      "monTuChon": [
+        "vatLy"
+      ]
+    },
+    {
+      "sbd": "42008915",
+      "hoTen": "Nguyễn Trúc Quỳnh",
+      "ngaySinh": "27/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A4",
+      "phongThi": 387,
+      "monTuChon": [
+        "sinhHoc",
+        "ngoaiNgu"
+      ]
+    },
+    {
+      "sbd": "42008935",
+      "hoTen": "Trần Trí Tâm",
+      "ngaySinh": "26/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 387,
+      "monTuChon": [
+        "lichSu",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008428",
+      "hoTen": "Nguyễn Ngọc Bích",
+      "ngaySinh": "21/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 388,
+      "monTuChon": [
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008685",
+      "hoTen": "Lê Phương Lê",
+      "ngaySinh": "30/08/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 388,
+      "monTuChon": [
+        "ngoaiNgu",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008710",
+      "hoTen": "Phạm Thị Thùy Linh",
+      "ngaySinh": "02/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A2",
+      "phongThi": 388,
+      "monTuChon": [
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008715",
+      "hoTen": "Trần Gia Linh",
+      "ngaySinh": "25/03/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A1",
+      "phongThi": 388,
+      "monTuChon": [
+        "vatLy"
+      ]
+    },
+    {
+      "sbd": "42008743",
+      "hoTen": "Nguyễn Thị Xuân Mai",
+      "ngaySinh": "04/07/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A11",
+      "phongThi": 388,
+      "monTuChon": [
+        "KTPL"
+      ]
+    },
+    {
+      "sbd": "42008754",
+      "hoTen": "Nguyễn Ngọc Minh",
+      "ngaySinh": "29/06/2008",
+      "gioiTinh": "Nam",
+      "lop": "12A10",
+      "phongThi": 388,
+      "monTuChon": [
+        "lichSu"
+      ]
+    },
+    {
+      "sbd": "42008767",
+      "hoTen": "Trần Hà My",
+      "ngaySinh": "05/03/2006",
+      "gioiTinh": "Nữ",
+      "lop": "12A6",
+      "phongThi": 388,
+      "monTuChon": [
+        "ngoaiNgu",
+        "hoaHoc"
+      ]
+    },
+    {
+      "sbd": "42008911",
+      "hoTen": "Nguyễn Thị Diễm Quỳnh",
+      "ngaySinh": "22/12/2008",
+      "gioiTinh": "Nữ",
+      "lop": "12A7",
+      "phongThi": 388,
+      "monTuChon": [
+        "hoaHoc"
+      ]
+    }
+  ]
+}

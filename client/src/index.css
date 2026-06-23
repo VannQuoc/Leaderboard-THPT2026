@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Be Vietnam Pro', system-ui, sans-serif;
+
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+
+  --color-surface-dark: #0a0a0a;
+  --color-surface-card: #141414;
+  --color-surface-elevated: #1a1a1a;
+  --color-surface-border: #262626;
+
+  --color-surface-light: #fafaf9;
+  --color-surface-card-light: #ffffff;
+  --color-surface-elevated-light: #f5f5f4;
+  --color-surface-border-light: #e7e5e4;
+}
+
+/* Base layer */
+@layer base {
+  :root {
+    --bg: var(--color-surface-dark);
+    --bg-card: var(--color-surface-card);
+    --bg-elevated: var(--color-surface-elevated);
+    --border: var(--color-surface-border);
+    --text-primary: #fafaf9;
+    --text-secondary: #a8a29e;
+    --text-muted: #78716c;
+    --accent: var(--color-emerald-500);
+    --accent-hover: var(--color-emerald-400);
+    --gold: var(--color-amber-500);
+    --gold-light: var(--color-amber-400);
+  }
+
+  .light {
+    --bg: var(--color-surface-light);
+    --bg-card: var(--color-surface-card-light);
+    --bg-elevated: var(--color-surface-elevated-light);
+    --border: var(--color-surface-border-light);
+    --text-primary: #1c1917;
+    --text-secondary: #57534e;
+    --text-muted: #a8a29e;
+    --accent: var(--color-emerald-600);
+    --accent-hover: var(--color-emerald-700);
+    --gold: var(--color-amber-500);
+    --gold-light: var(--color-amber-400);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Utility classes */
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-emerald-400), var(--color-teal-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    position: relative;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--color-emerald-600), var(--color-teal-600));
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  .card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+  }
+
+  .badge-gold {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #1c1917;
+  }
+
+  .badge-silver {
+    background: linear-gradient(135deg, #d1d5db, #9ca3af);
+    color: #1c1917;
+  }
+
+  .badge-bronze {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: #fff;
+  }
+
+  .badge-accent {
+    background-color: color-mix(in srgb, var(--accent) 15%, transparent);
+    color: var(--accent);
+  }
+
+  .stat-number {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .table-row {
+    transition: background-color 0.15s ease;
+  }
+  .table-row:hover {
+    background-color: var(--bg-elevated);
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-count-up {
+    animation: countUp 0.6s ease forwards;
+  }
+}
