@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getOverview, getDistribution, getBySubject } from '../services/statsService.js';
+import { getOverview, getDistribution, getBySubject, getTopByKhoi } from '../services/statsService.js';
 
 const router = Router();
 
@@ -16,6 +16,11 @@ router.get('/distribution', async (_req, res) => {
 router.get('/by-subject', async (_req, res) => {
   const stats = await getBySubject();
   res.json({ success: true, data: stats });
+});
+
+router.get('/top-by-khoi', async (_req, res) => {
+  const data = await getTopByKhoi();
+  res.json({ success: true, data });
 });
 
 export default router;

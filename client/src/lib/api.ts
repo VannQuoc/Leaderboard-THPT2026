@@ -32,5 +32,9 @@ export const api = {
       fetchJson<import('./types').ApiResponse<import('./types').SubjectStats[]>>(
         `${API_BASE}/stats/by-subject`,
       ),
+    topByKhoi: () =>
+      fetchJson<import('./types').ApiResponse<import('./types').TopByKhoi[]>>(
+        `${API_BASE}/stats/top-by-khoi`,
+      ),
   },
 };

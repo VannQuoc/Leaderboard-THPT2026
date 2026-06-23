@@ -32,9 +32,23 @@ export interface StatsOverview {
   totalCrawled: number;
   averageScore: number;
   highestScore: number;
-  lowestScore: number;
+  medianScore: number;
   topStudent: Student | null;
   lastUpdated: string | null;
+}
+
+export interface KhoiDefinition {
+  code: string;
+  name: string;
+  subjects: (keyof ScoreData)[];
+  color: string;
+}
+
+export interface TopByKhoi {
+  khoi: KhoiDefinition;
+  topStudent: Student | null;
+  topScore: number;
+  studentCount: number;
 }
 
 export interface ScoreDistribution {
