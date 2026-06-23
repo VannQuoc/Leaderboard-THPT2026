@@ -1,4 +1,20 @@
-import { SUBJECT_LABELS, type ScoreData } from './types';
+import type { ScoreData } from './types';
+
+const SUBJECT_LABELS: Record<string, string> = {
+  toan: 'Toán',
+  van: 'Ngữ Văn',
+  ngoaiNgu: 'Ngoại Ngữ',
+  vatLy: 'Vật Lý',
+  hoaHoc: 'Hóa Học',
+  sinhHoc: 'Sinh Học',
+  lichSu: 'Lịch Sử',
+  diaLy: 'Địa Lý',
+  gdktPl: 'GDKT&PL',
+  tinHoc: 'Tin Học',
+  gdcd: 'GDCD',
+  cnCongNghiep: 'CN Công Nghiệp',
+  cnNongNghiep: 'CN Nông Nghiệp',
+};
 
 export function formatScore(score: number | null | undefined): string {
   if (score === null || score === undefined) return '—';

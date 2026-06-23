@@ -40,12 +40,20 @@ export interface StatsOverview {
 export interface KhoiDefinition {
   code: string;
   name: string;
-  subjects: (keyof ScoreData)[];
+  subjects: string[];
   color: string;
+  group: string;
 }
 
 export interface TopByKhoi {
   khoi: KhoiDefinition;
+  topStudent: Student | null;
+  topScore: number;
+  studentCount: number;
+}
+
+export interface RankingEntry {
+  label: string;
   topStudent: Student | null;
   topScore: number;
   studentCount: number;
@@ -75,21 +83,3 @@ export interface ApiResponse<T> {
     totalPages: number;
   };
 }
-
-export const SUBJECT_LABELS: Record<string, string> = {
-  toan: 'Toán',
-  van: 'Ngữ Văn',
-  ngoaiNgu: 'Ngoại Ngữ',
-  vatLy: 'Vật Lý',
-  hoaHoc: 'Hóa Học',
-  sinhHoc: 'Sinh Học',
-  lichSu: 'Lịch Sử',
-  diaLy: 'Địa Lý',
-  gdktPl: 'GDKT&PL',
-  tinHoc: 'Tin Học',
-  gdcd: 'GDCD',
-  cnCongNghiep: 'CN Công Nghiệp',
-  cnNongNghiep: 'CN Nông Nghiệp',
-};
-
-export const SUBJECT_KEYS = Object.keys(SUBJECT_LABELS) as (keyof ScoreData)[];

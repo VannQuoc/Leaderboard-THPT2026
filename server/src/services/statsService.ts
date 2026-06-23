@@ -1,11 +1,37 @@
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 import { getStudentsWithScores } from '../db/jsonDb.js';
-import type { StudentWithScore, StatsOverview, ScoreDistribution, SubjectStats, TopByKhoi, ScoreData } from '../types.js';
-import { SUBJECT_LABELS, KHOI_DEFINITIONS } from '../types.js';
+import { config } from '../config.js';
+import type { StudentWithScore, StatsOverview, ScoreDistribution, SubjectStats, TopByKhoi, RankingEntry, KhoiDefinition, KhoiJsonFile, ScoreData } from '../types.js';
+import { SUBJECT_LABELS } from '../types.js';
 
-function calcKhoiScore(scores: ScoreData, subjects: (keyof ScoreData)[]): number | null {
-  const values = subjects.map((s) => scores[s]);
-  if (values.some((v) => v === null || v === undefined || v < 0)) return null;
+// Load khối definitions from JSON (cached)
+let _khoiCache: KhoiDefinition[] | null = null;
+function loadKhoiDefinitions(): KhoiDefinition[] {
+  if (_khoiCache) return _khoiCache;
+  const filePath = path.join(config.dataDir, 'khoi.json');
+  const raw: KhoiJsonFile = JSON.parse(readFileSync(filePath, 'utf-8'));
+  _khoiCache = raw.blocks;
+  return _khoiCache;
+}
+
+function calcKhoiScore(scores: ScoreData, subjects: string[]): number | null {
+  const values = subjects.map((s) => (scores as Record<string, number | null>)[s]);
+  if (values.some((v) => v === null || v === undefined)) return null;
   return Math.round((values as number[]).reduce((a, b) => a + b, 0) * 100) / 100;
+}
+
+function findTop(students: StudentWithScore[], scoreFn: (s: StudentWithScore) => number | null): { topStudent: StudentWithScore | null; topScore: number } {
+  let topStudent: StudentWithScore | null = null;
+  let topScore = -1;
+  for (const s of students) {
+    const score = scoreFn(s);
+    if (score !== null && score > topScore) {
+      topScore = score;
+      topStudent = s;
+    }
+  }
+  return { topStudent, topScore: Math.max(0, topScore) };
 }
 
 export async function getOverview(): Promise<StatsOverview> {
@@ -35,24 +61,65 @@ export async function getOverview(): Promise<StatsOverview> {
 export async function getTopByKhoi(): Promise<TopByKhoi[]> {
   const students = await getStudentsWithScores();
   const withScores = students.filter((s) => s.scores !== null);
+  const khoiDefs = loadKhoiDefinitions();
 
-  return KHOI_DEFINITIONS.map((khoi) => {
-    let topStudent: StudentWithScore | null = null;
-    let topScore = 0;
-    let count = 0;
+  return khoiDefs
+    .map((khoi) => {
+      let topStudent: StudentWithScore | null = null;
+      let topScore = 0;
+      let count = 0;
 
-    for (const student of withScores) {
-      const score = calcKhoiScore(student.scores!, khoi.subjects);
-      if (score === null) continue;
-      count++;
-      if (score > topScore) {
-        topScore = score;
-        topStudent = student;
+      for (const student of withScores) {
+        const score = calcKhoiScore(student.scores!, khoi.subjects);
+        if (score === null) continue;
+        count++;
+        if (score > topScore) {
+          topScore = score;
+          topStudent = student;
+        }
       }
-    }
 
-    return { khoi, topStudent, topScore, studentCount: count };
-  }).filter((r) => r.studentCount > 0);
+      return { khoi, topStudent, topScore, studentCount: count };
+    })
+    .filter((r) => r.studentCount > 0);
+}
+
+export async function getTopByLop(): Promise<RankingEntry[]> {
+  const students = await getStudentsWithScores();
+  const withScores = students.filter((s) => s.tongDiem !== null);
+
+  const groups = new Map<string, StudentWithScore[]>();
+  for (const s of withScores) {
+    const arr = groups.get(s.lop) ?? [];
+    arr.push(s);
+    groups.set(s.lop, arr);
+  }
+
+  return [...groups.entries()]
+    .map(([label, members]) => {
+      const { topStudent, topScore } = findTop(members, (s) => s.tongDiem);
+      return { label, topStudent, topScore, studentCount: members.length };
+    })
+    .sort((a, b) => a.label.localeCompare(b.label, 'vi'));
+}
+
+export async function getTopByPhong(): Promise<RankingEntry[]> {
+  const students = await getStudentsWithScores();
+  const withScores = students.filter((s) => s.tongDiem !== null);
+
+  const groups = new Map<number, StudentWithScore[]>();
+  for (const s of withScores) {
+    const arr = groups.get(s.phongThi) ?? [];
+    arr.push(s);
+    groups.set(s.phongThi, arr);
+  }
+
+  return [...groups.entries()]
+    .map(([phong, members]) => {
+      const { topStudent, topScore } = findTop(members, (s) => s.tongDiem);
+      return { label: `Phòng ${phong}`, topStudent, topScore, studentCount: members.length };
+    })
+    .sort((a, b) => a.label.localeCompare(b.label));
 }
 
 export async function getDistribution(): Promise<ScoreDistribution[]> {
@@ -97,4 +164,8 @@ export async function getBySubject(): Promise<SubjectStats[]> {
       };
     })
     .filter((s): s is SubjectStats => s !== null);
+}
+
+export function getKhoiDefinitions(): KhoiDefinition[] {
+  return loadKhoiDefinitions();
 }

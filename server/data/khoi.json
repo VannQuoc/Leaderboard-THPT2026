@@ -1,0 +1,47 @@
+{
+  "version": "2025",
+  "description": "Danh sách khối thi đại học chuẩn Việt Nam",
+  "blocks": [
+    { "code": "A00", "name": "Toán - Lý - Hóa", "subjects": ["toan", "vatLy", "hoaHoc"], "color": "#ef4444", "group": "A" },
+    { "code": "A01", "name": "Toán - Lý - Anh", "subjects": ["toan", "vatLy", "ngoaiNgu"], "color": "#f97316", "group": "A" },
+    { "code": "A02", "name": "Toán - Lý - Sinh", "subjects": ["toan", "vatLy", "sinhHoc"], "color": "#fb923c", "group": "A" },
+    { "code": "A03", "name": "Toán - Lý - Sử", "subjects": ["toan", "vatLy", "lichSu"], "color": "#fbbf24", "group": "A" },
+    { "code": "A04", "name": "Toán - Lý - Địa", "subjects": ["toan", "vatLy", "diaLy"], "color": "#facc15", "group": "A" },
+    { "code": "A05", "name": "Toán - Hóa - Sử", "subjects": ["toan", "hoaHoc", "lichSu"], "color": "#a3e635", "group": "A" },
+    { "code": "A06", "name": "Toán - Hóa - Địa", "subjects": ["toan", "hoaHoc", "diaLy"], "color": "#84cc16", "group": "A" },
+    { "code": "A07", "name": "Toán - Hóa - GDCD", "subjects": ["toan", "hoaHoc", "gdcd"], "color": "#65a30d", "group": "A" },
+    { "code": "A08", "name": "Toán - Sử - GDCD", "subjects": ["toan", "lichSu", "gdcd"], "color": "#4d7c0f", "group": "A" },
+    { "code": "A09", "name": "Toán - Địa - GDCD", "subjects": ["toan", "diaLy", "gdcd"], "color": "#15803d", "group": "A" },
+    { "code": "A10", "name": "Toán - Lý - GDCD", "subjects": ["toan", "vatLy", "gdcd"], "color": "#059669", "group": "A" },
+    { "code": "A11", "name": "Toán - Hóa - Tin", "subjects": ["toan", "hoaHoc", "tinHoc"], "color": "#0d9488", "group": "A" },
+    { "code": "A16", "name": "Toán - Lý - Tin", "subjects": ["toan", "vatLy", "tinHoc"], "color": "#0891b2", "group": "A" },
+
+    { "code": "B00", "name": "Toán - Hóa - Sinh", "subjects": ["toan", "hoaHoc", "sinhHoc"], "color": "#22c55e", "group": "B" },
+    { "code": "B01", "name": "Toán - Sinh - Sử", "subjects": ["toan", "sinhHoc", "lichSu"], "color": "#16a34a", "group": "B" },
+    { "code": "B02", "name": "Toán - Sinh - Địa", "subjects": ["toan", "sinhHoc", "diaLy"], "color": "#15803d", "group": "B" },
+    { "code": "B03", "name": "Toán - Sinh - Anh", "subjects": ["toan", "sinhHoc", "ngoaiNgu"], "color": "#166534", "group": "B" },
+    { "code": "B04", "name": "Toán - Sinh - GDCD", "subjects": ["toan", "sinhHoc", "gdcd"], "color": "#14532d", "group": "B" },
+    { "code": "B08", "name": "Toán - Sinh - Tin", "subjects": ["toan", "sinhHoc", "tinHoc"], "color": "#052e16", "group": "B" },
+
+    { "code": "C00", "name": "Văn - Sử - Địa", "subjects": ["van", "lichSu", "diaLy"], "color": "#3b82f6", "group": "C" },
+    { "code": "C01", "name": "Văn - Toán - Lý", "subjects": ["van", "toan", "vatLy"], "color": "#2563eb", "group": "C" },
+    { "code": "C02", "name": "Văn - Toán - Hóa", "subjects": ["van", "toan", "hoaHoc"], "color": "#1d4ed8", "group": "C" },
+    { "code": "C03", "name": "Văn - Toán - Sử", "subjects": ["van", "toan", "lichSu"], "color": "#1e40af", "group": "C" },
+    { "code": "C04", "name": "Văn - Toán - Địa", "subjects": ["van", "toan", "diaLy"], "color": "#1e3a8a", "group": "C" },
+    { "code": "C19", "name": "Văn - Sử - GDCD", "subjects": ["van", "lichSu", "gdcd"], "color": "#312e81", "group": "C" },
+    { "code": "C20", "name": "Văn - Địa - GDCD", "subjects": ["van", "diaLy", "gdcd"], "color": "#3730a3", "group": "C" },
+
+    { "code": "D01", "name": "Toán - Văn - Anh", "subjects": ["toan", "van", "ngoaiNgu"], "color": "#a855f7", "group": "D" },
+    { "code": "D07", "name": "Toán - Hóa - Anh", "subjects": ["toan", "hoaHoc", "ngoaiNgu"], "color": "#9333ea", "group": "D" },
+    { "code": "D08", "name": "Toán - Sinh - Anh", "subjects": ["toan", "sinhHoc", "ngoaiNgu"], "color": "#7c3aed", "group": "D" },
+    { "code": "D09", "name": "Toán - Sử - Anh", "subjects": ["toan", "lichSu", "ngoaiNgu"], "color": "#6d28d9", "group": "D" },
+    { "code": "D10", "name": "Toán - Địa - Anh", "subjects": ["toan", "diaLy", "ngoaiNgu"], "color": "#5b21b6", "group": "D" },
+    { "code": "D11", "name": "Văn - Lý - Anh", "subjects": ["van", "vatLy", "ngoaiNgu"], "color": "#ec4899", "group": "D" },
+    { "code": "D12", "name": "Văn - Hóa - Anh", "subjects": ["van", "hoaHoc", "ngoaiNgu"], "color": "#db2777", "group": "D" },
+    { "code": "D13", "name": "Văn - Sinh - Anh", "subjects": ["van", "sinhHoc", "ngoaiNgu"], "color": "#be185d", "group": "D" },
+    { "code": "D14", "name": "Văn - Sử - Anh", "subjects": ["van", "lichSu", "ngoaiNgu"], "color": "#9d174d", "group": "D" },
+    { "code": "D15", "name": "Văn - Địa - Anh", "subjects": ["van", "diaLy", "ngoaiNgu"], "color": "#831843", "group": "D" },
+    { "code": "D66", "name": "Văn - GDCD - Anh", "subjects": ["van", "gdcd", "ngoaiNgu"], "color": "#881337", "group": "D" },
+    { "code": "D84", "name": "Toán - GDCD - Anh", "subjects": ["toan", "gdcd", "ngoaiNgu"], "color": "#9f1239", "group": "D" }
+  ]
+}

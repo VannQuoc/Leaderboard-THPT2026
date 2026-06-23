@@ -36,6 +36,22 @@ export type Student = z.infer<typeof StudentSchema>;
 export type ScoreData = z.infer<typeof ScoreDataSchema>;
 export type StudentWithScore = z.infer<typeof StudentWithScoreSchema>;
 
+// --- Khoi (loaded from JSON) ---
+export interface KhoiDefinition {
+  code: string;
+  name: string;
+  subjects: string[];
+  color: string;
+  group: string;
+}
+
+export interface KhoiJsonFile {
+  version: string;
+  description: string;
+  blocks: KhoiDefinition[];
+}
+
+// --- Stats ---
 export interface StatsOverview {
   totalStudents: number;
   totalCrawled: number;
@@ -46,13 +62,6 @@ export interface StatsOverview {
   lastUpdated: string | null;
 }
 
-export interface KhoiDefinition {
-  code: string;
-  name: string;
-  subjects: (keyof ScoreData)[];
-  color: string;
-}
-
 export interface TopByKhoi {
   khoi: KhoiDefinition;
   topStudent: StudentWithScore | null;
@@ -60,16 +69,12 @@ export interface TopByKhoi {
   studentCount: number;
 }
 
-export const KHOI_DEFINITIONS: KhoiDefinition[] = [
-  { code: 'A00', name: 'Toán - Lý - Hóa', subjects: ['toan', 'vatLy', 'hoaHoc'], color: '#ef4444' },
-  { code: 'A01', name: 'Toán - Lý - Anh', subjects: ['toan', 'vatLy', 'ngoaiNgu'], color: '#f97316' },
-  { code: 'B00', name: 'Toán - Hóa - Sinh', subjects: ['toan', 'hoaHoc', 'sinhHoc'], color: '#22c55e' },
-  { code: 'C00', name: 'Văn - Sử - Địa', subjects: ['van', 'lichSu', 'diaLy'], color: '#3b82f6' },
-  { code: 'D01', name: 'Toán - Văn - Anh', subjects: ['toan', 'van', 'ngoaiNgu'], color: '#a855f7' },
-  { code: 'D07', name: 'Toán - Hóa - Anh', subjects: ['toan', 'hoaHoc', 'ngoaiNgu'], color: '#ec4899' },
-  { code: 'D08', name: 'Toán - Sinh - Anh', subjects: ['toan', 'sinhHoc', 'ngoaiNgu'], color: '#14b8a6' },
-  { code: 'D10', name: 'Toán - Địa - Anh', subjects: ['toan', 'diaLy', 'ngoaiNgu'], color: '#06b6d4' },
-];
+export interface RankingEntry {
+  label: string;
+  topStudent: StudentWithScore | null;
+  topScore: number;
+  studentCount: number;
+}
 
 export interface ScoreDistribution {
   range: string;
@@ -112,7 +117,6 @@ export const SUBJECT_LABELS: Record<string, string> = {
   cnNongNghiep: 'CN Nông Nghiệp',
 };
 
-// Map API field names to our schema
 export const API_FIELD_MAP: Record<string, keyof ScoreData> = {
   TOAN: 'toan',
   VAN: 'van',

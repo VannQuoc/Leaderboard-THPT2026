@@ -36,5 +36,13 @@ export const api = {
       fetchJson<import('./types').ApiResponse<import('./types').TopByKhoi[]>>(
         `${API_BASE}/stats/top-by-khoi`,
       ),
+    topByLop: () =>
+      fetchJson<import('./types').ApiResponse<import('./types').RankingEntry[]>>(
+        `${API_BASE}/stats/top-by-lop`,
+      ),
+    topByPhong: () =>
+      fetchJson<import('./types').ApiResponse<import('./types').RankingEntry[]>>(
+        `${API_BASE}/stats/top-by-phong`,
+      ),
   },
 };

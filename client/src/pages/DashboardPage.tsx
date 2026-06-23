@@ -2,15 +2,12 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Users, Trophy, TrendingUp, BarChart3, ArrowRight, Crown, Medal } from 'lucide-react';
+import { Users, Trophy, TrendingUp, BarChart3, ArrowRight, Crown, School, DoorOpen } from 'lucide-react';
 import { api } from '../lib/api';
 import { formatScore, getScoreColor } from '../lib/utils';
-import type { StatsOverview, ScoreDistribution, Student, SubjectStats, TopByKhoi } from '../lib/types';
+import type { StatsOverview, ScoreDistribution, Student, SubjectStats, TopByKhoi, RankingEntry } from '../lib/types';
+import ScratchRevealCard from '../components/ScratchRevealCard';
 
-const stagger = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.06 } },
-};
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
   show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
@@ -38,6 +35,9 @@ export default function DashboardPage() {
   const [topStudents, setTopStudents] = useState<Student[]>([]);
   const [subjectStats, setSubjectStats] = useState<SubjectStats[]>([]);
   const [topByKhoi, setTopByKhoi] = useState<TopByKhoi[]>([]);
+  const [topByLop, setTopByLop] = useState<RankingEntry[]>([]);
+  const [topByPhong, setTopByPhong] = useState<RankingEntry[]>([]);
+  const [khoiTab, setKhoiTab] = useState<string>('all');
 
   useEffect(() => {
     Promise.all([
@@ -45,6 +45,8 @@ export default function DashboardPage() {
       api.stats.distribution().then((r) => setDistribution(r.data)),
       api.stats.bySubject().then((r) => setSubjectStats(r.data)),
       api.stats.topByKhoi().then((r) => setTopByKhoi(r.data)),
+      api.stats.topByLop().then((r) => setTopByLop(r.data)),
+      api.stats.topByPhong().then((r) => setTopByPhong(r.data)),
       api.students.list({ limit: '10', sort: 'tongDiem', order: 'desc' }).then((r) => setTopStudents(r.data)),
     ]).catch(console.error);
   }, []);
@@ -57,9 +59,12 @@ export default function DashboardPage() {
     );
   }
 
+  const khoiGroups = [...new Set(topByKhoi.map((k) => k.khoi.group))].sort();
+  const filteredKhoi = khoiTab === 'all' ? topByKhoi : topByKhoi.filter((k) => k.khoi.group === khoiTab);
+
   return (
     <div className="mx-auto max-w-7xl px-3 py-5 sm:px-6 lg:px-8">
-      {/* Hero — compact on mobile */}
+      {/* Hero */}
       <motion.div initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} className="mb-5 sm:mb-8 text-center">
         <h1 className="text-2xl font-black sm:text-4xl lg:text-5xl">
           <span className="gradient-text">Bảng Xếp Hạng</span>
@@ -69,8 +74,8 @@ export default function DashboardPage() {
         </p>
       </motion.div>
 
-      {/* Stat Cards — 3 cards, no lowest score */}
-      <motion.div variants={stagger} initial="hidden" animate="show" className="mb-5 sm:mb-8 grid grid-cols-3 gap-2 sm:gap-4">
+      {/* Stat Cards */}
+      <motion.div variants={fadeUp} initial="hidden" animate="show" className="mb-5 sm:mb-8 grid grid-cols-3 gap-2 sm:gap-4">
         {[
           { icon: Users, label: 'Thí sinh', value: overview.totalStudents, decimals: 0, color: 'bg-emerald-600' },
           { icon: Trophy, label: 'Điểm cao nhất', value: overview.highestScore, decimals: 2, color: 'bg-amber-500', suffix: 'đ' },
@@ -91,84 +96,177 @@ export default function DashboardPage() {
         ))}
       </motion.div>
 
-      {/* === THỦ KHOA THEO KHỐI — the main new feature === */}
+      {/* ====== VINH DANH THỦ KHOA — Scratch Cards ====== */}
       <motion.div variants={fadeUp} initial="hidden" animate="show" className="mb-5 sm:mb-8">
         <div className="flex items-center gap-2 mb-3 sm:mb-4">
+          <span className="text-xl sm:text-2xl">🏆</span>
+          <h2 className="text-base sm:text-xl font-black" style={{ color: 'var(--text-primary)' }}>Vinh Danh</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <ScratchRevealCard
+            rank={1}
+            label="Thủ Khoa"
+            student={topStudents[0] ?? null}
+            score={topStudents[0]?.tongDiem ?? 0}
+            color="#fbbf24"
+            gradientFrom="#b45309"
+            gradientTo="#d97706"
+            emoji="🥇"
+            delay={0.1}
+          />
+          <ScratchRevealCard
+            rank={2}
+            label="Á Khoa"
+            student={topStudents[1] ?? null}
+            score={topStudents[1]?.tongDiem ?? 0}
+            color="#9ca3af"
+            gradientFrom="#4b5563"
+            gradientTo="#6b7280"
+            emoji="🥈"
+            delay={0.2}
+          />
+          <ScratchRevealCard
+            rank={3}
+            label="Tam Khoa"
+            student={topStudents[2] ?? null}
+            score={topStudents[2]?.tongDiem ?? 0}
+            color="#b45309"
+            gradientFrom="#78350f"
+            gradientTo="#92400e"
+            emoji="🥉"
+            delay={0.3}
+          />
+        </div>
+      </motion.div>
+
+      {/* ====== THỦ KHOA THEO KHỐI ====== */}
+      <motion.div variants={fadeUp} initial="hidden" animate="show" className="mb-5 sm:mb-8">
+        <div className="flex items-center gap-2 mb-3">
           <Crown className="h-5 w-5 text-amber-400" />
           <h2 className="text-base sm:text-lg font-bold" style={{ color: 'var(--text-primary)' }}>Thủ khoa theo khối</h2>
+          <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full font-medium" style={{ backgroundColor: 'var(--bg-elevated)', color: 'var(--text-muted)' }}>
+            {topByKhoi.length} khối
+          </span>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
-          {topByKhoi.map((item, i) => (
+        {/* Group tabs */}
+        <div className="flex gap-1.5 mb-3 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
+          <button
+            onClick={() => setKhoiTab('all')}
+            className={`whitespace-nowrap rounded-full px-3 py-1 text-[11px] sm:text-xs font-medium transition-colors ${
+              khoiTab === 'all' ? 'bg-emerald-600 text-white' : ''
+            }`}
+            style={khoiTab !== 'all' ? { backgroundColor: 'var(--bg-card)', color: 'var(--text-secondary)', border: '1px solid var(--border)' } : undefined}
+          >
+            Tất cả ({topByKhoi.length})
+          </button>
+          {khoiGroups.map((g) => {
+            const count = topByKhoi.filter((k) => k.khoi.group === g).length;
+            return (
+              <button
+                key={g}
+                onClick={() => setKhoiTab(g)}
+                className={`whitespace-nowrap rounded-full px-3 py-1 text-[11px] sm:text-xs font-medium transition-colors ${
+                  khoiTab === g ? 'bg-emerald-600 text-white' : ''
+                }`}
+                style={khoiTab !== g ? { backgroundColor: 'var(--bg-card)', color: 'var(--text-secondary)', border: '1px solid var(--border)' } : undefined}
+              >
+                Nhóm {g} ({count})
+              </button>
+            );
+          })}
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
+          {filteredKhoi.map((item) => (
             <motion.div
               key={item.khoi.code}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 * i }}
-              className="card overflow-hidden group"
+              layout
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="card p-3 sm:p-4 group"
             >
-              {/* Khối badge header */}
-              <div className="flex items-center gap-2 px-3 pt-3 sm:px-4 sm:pt-4">
-                <div
-                  className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-white text-xs sm:text-sm font-black"
+              <div className="flex items-center gap-2 mb-2">
+                <span
+                  className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg text-white text-[10px] sm:text-xs font-black"
                   style={{ backgroundColor: item.khoi.color }}
                 >
                   {item.khoi.code}
+                </span>
+                <div className="flex-1 min-w-0">
+                  <span className="text-[11px] sm:text-xs font-medium block truncate" style={{ color: 'var(--text-secondary)' }}>{item.khoi.name}</span>
+                  <span className="text-[10px]" style={{ color: 'var(--text-muted)' }}>{item.studentCount} TS</span>
                 </div>
-                <div className="min-w-0 flex-1">
-                  <span className="text-[11px] sm:text-xs font-medium block truncate" style={{ color: 'var(--text-muted)' }}>
-                    {item.khoi.name}
-                  </span>
-                  <span className="text-[10px] sm:text-xs" style={{ color: 'var(--text-muted)' }}>
-                    {item.studentCount} thí sinh
-                  </span>
-                </div>
+                <span className="stat-number text-sm sm:text-base" style={{ color: item.khoi.color }}>{item.topScore.toFixed(2)}</span>
               </div>
-
-              {/* Student info */}
               {item.topStudent && (
-                <div className="px-3 pb-3 pt-2 sm:px-4 sm:pb-4 sm:pt-3">
-                  <Link to={`/student/${item.topStudent.sbd}`} className="block">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <Medal className="h-3.5 w-3.5 flex-shrink-0 text-amber-400" />
-                      <span className="text-sm sm:text-base font-bold truncate group-hover:text-emerald-400 transition-colors" style={{ color: 'var(--text-primary)' }}>
-                        {item.topStudent.hoTen}
-                      </span>
-                    </div>
-                    <div className="flex items-baseline justify-between">
-                      <span className="text-[10px] sm:text-xs" style={{ color: 'var(--text-muted)' }}>
-                        {item.topStudent.lop} • SBD {item.topStudent.sbd}
-                      </span>
-                      <span className="stat-number text-lg sm:text-xl" style={{ color: item.khoi.color }}>
-                        {item.topScore.toFixed(2)}
-                      </span>
-                    </div>
-                    {/* Subject score pills */}
-                    <div className="mt-2 flex flex-wrap gap-1">
-                      {item.khoi.subjects.map((subj) => {
-                        const val = item.topStudent!.scores?.[subj];
-                        const label = subj === 'toan' ? 'T' : subj === 'van' ? 'V' : subj === 'vatLy' ? 'Lý' : subj === 'hoaHoc' ? 'Hóa' : subj === 'sinhHoc' ? 'Sinh' : subj === 'lichSu' ? 'Sử' : subj === 'diaLy' ? 'Địa' : subj === 'ngoaiNgu' ? 'Anh' : subj;
-                        return (
-                          <span
-                            key={subj}
-                            className={`text-[10px] sm:text-xs font-semibold px-1.5 py-0.5 rounded ${val !== null && val !== undefined ? getScoreColor(val as number) : ''}`}
-                            style={{ backgroundColor: 'var(--bg-elevated)' }}
-                          >
-                            {label}: {val !== null && val !== undefined ? val : '—'}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  </Link>
-                </div>
+                <Link to={`/student/${item.topStudent.sbd}`} className="flex items-center gap-2 rounded-lg p-2" style={{ backgroundColor: 'var(--bg-elevated)' }}>
+                  <span className="text-xs">🏅</span>
+                  <span className="text-xs sm:text-sm font-semibold truncate group-hover:text-emerald-400 transition-colors" style={{ color: 'var(--text-primary)' }}>
+                    {item.topStudent.hoTen}
+                  </span>
+                  <span className="text-[10px] ml-auto" style={{ color: 'var(--text-muted)' }}>{item.topStudent.lop}</span>
+                </Link>
               )}
             </motion.div>
           ))}
         </div>
       </motion.div>
 
-      {/* Chart + Median — responsive grid */}
+      {/* ====== THỦ KHOA THEO LỚP + PHÒNG ====== */}
+      <div className="grid gap-3 sm:gap-6 lg:grid-cols-2 mb-5 sm:mb-8">
+        {/* By Lớp */}
+        <motion.div variants={fadeUp} initial="hidden" animate="show" className="card p-3 sm:p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <School className="h-4 w-4" style={{ color: 'var(--text-muted)' }} />
+            <h2 className="text-sm sm:text-base font-bold" style={{ color: 'var(--text-primary)' }}>Thủ khoa theo lớp</h2>
+          </div>
+          <div className="space-y-1.5">
+            {topByLop.map((r) => (
+              <div key={r.label} className="flex items-center gap-2 rounded-lg p-2" style={{ backgroundColor: 'var(--bg-elevated)' }}>
+                <span className="text-[11px] sm:text-xs font-bold w-12 sm:w-14" style={{ color: 'var(--accent)' }}>{r.label}</span>
+                {r.topStudent ? (
+                  <Link to={`/student/${r.topStudent.sbd}`} className="flex-1 min-w-0 flex items-center gap-2 group">
+                    <span className="text-xs sm:text-sm font-medium truncate group-hover:text-emerald-400 transition-colors" style={{ color: 'var(--text-primary)' }}>
+                      {r.topStudent.hoTen}
+                    </span>
+                    <span className="ml-auto stat-number text-xs sm:text-sm text-emerald-400 flex-shrink-0">{r.topScore.toFixed(2)}</span>
+                  </Link>
+                ) : (
+                  <span className="text-xs" style={{ color: 'var(--text-muted)' }}>—</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* By Phòng */}
+        <motion.div variants={fadeUp} initial="hidden" animate="show" className="card p-3 sm:p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <DoorOpen className="h-4 w-4" style={{ color: 'var(--text-muted)' }} />
+            <h2 className="text-sm sm:text-base font-bold" style={{ color: 'var(--text-primary)' }}>Thủ khoa theo phòng thi</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-1.5 max-h-96 overflow-y-auto pr-1" style={{ scrollbarWidth: 'thin' }}>
+            {topByPhong.map((r) => (
+              <div key={r.label} className="flex items-center gap-2 rounded-lg p-2" style={{ backgroundColor: 'var(--bg-elevated)' }}>
+                <span className="text-[10px] sm:text-xs font-bold w-16" style={{ color: 'var(--accent)' }}>{r.label}</span>
+                {r.topStudent ? (
+                  <Link to={`/student/${r.topStudent.sbd}`} className="flex-1 min-w-0 flex items-center gap-2 group">
+                    <span className="text-xs font-medium truncate group-hover:text-emerald-400 transition-colors" style={{ color: 'var(--text-primary)' }}>
+                      {r.topStudent.hoTen}
+                    </span>
+                    <span className="ml-auto stat-number text-xs text-emerald-400 flex-shrink-0">{r.topScore.toFixed(2)}</span>
+                  </Link>
+                ) : (
+                  <span className="text-xs" style={{ color: 'var(--text-muted)' }}>—</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Chart + Quick stats */}
       <div className="grid gap-3 sm:gap-6 lg:grid-cols-3 mb-5 sm:mb-8">
-        {/* Score Distribution */}
         <motion.div variants={fadeUp} initial="hidden" animate="show" className="card p-3 sm:p-6 lg:col-span-2">
           <h2 className="mb-3 text-sm sm:text-lg font-bold" style={{ color: 'var(--text-primary)' }}>
             <BarChart3 className="inline h-4 w-4 mr-1.5 align-text-bottom" style={{ color: 'var(--text-muted)' }} />
@@ -191,30 +289,28 @@ export default function DashboardPage() {
           </div>
         </motion.div>
 
-        {/* Quick stats sidebar */}
         <motion.div variants={fadeUp} initial="hidden" animate="show" className="card p-3 sm:p-6 flex flex-col justify-center">
-          <h2 className="mb-3 text-sm sm:text-lg font-bold" style={{ color: 'var(--text-primary)' }}>Tổng quan nhanh</h2>
-          <div className="space-y-3 sm:space-y-4">
-            <div className="rounded-lg p-3" style={{ backgroundColor: 'var(--bg-elevated)' }}>
-              <span className="text-[10px] sm:text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Điểm trung vị (Median)</span>
-              <div className="stat-number text-xl sm:text-2xl text-teal-400 mt-0.5"><CountUp value={overview.medianScore} /></div>
-            </div>
-            <div className="rounded-lg p-3" style={{ backgroundColor: 'var(--bg-elevated)' }}>
-              <span className="text-[10px] sm:text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Đã tra cứu</span>
-              <div className="stat-number text-xl sm:text-2xl mt-0.5" style={{ color: 'var(--text-primary)' }}>
-                <CountUp value={overview.totalCrawled} decimals={0} />
-                <span className="text-sm font-normal" style={{ color: 'var(--text-muted)' }}>/{overview.totalStudents}</span>
+          <h2 className="mb-3 text-sm sm:text-lg font-bold" style={{ color: 'var(--text-primary)' }}>Tổng quan</h2>
+          <div className="space-y-3">
+            {[
+              { label: 'Trung vị', value: overview.medianScore, decimals: 2, color: 'text-teal-400' },
+              { label: 'Đã tra cứu', value: overview.totalCrawled, decimals: 0, color: '', suffix: `/${overview.totalStudents}` },
+              { label: 'Số khối', value: topByKhoi.length, decimals: 0, color: 'text-amber-400' },
+              { label: 'Số lớp', value: topByLop.length, decimals: 0, color: 'text-blue-400' },
+            ].map(({ label, value, decimals, color, suffix }) => (
+              <div key={label} className="rounded-lg p-2.5 sm:p-3" style={{ backgroundColor: 'var(--bg-elevated)' }}>
+                <span className="text-[10px] sm:text-xs font-medium" style={{ color: 'var(--text-muted)' }}>{label}</span>
+                <div className={`stat-number text-lg sm:text-2xl mt-0.5 ${color}`} style={!color ? { color: 'var(--text-primary)' } : undefined}>
+                  <CountUp value={value} decimals={decimals} />
+                  {suffix && <span className="text-xs sm:text-sm font-normal" style={{ color: 'var(--text-muted)' }}>{suffix}</span>}
+                </div>
               </div>
-            </div>
-            <div className="rounded-lg p-3" style={{ backgroundColor: 'var(--bg-elevated)' }}>
-              <span className="text-[10px] sm:text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Số khối thi</span>
-              <div className="stat-number text-xl sm:text-2xl text-amber-400 mt-0.5"><CountUp value={topByKhoi.length} decimals={0} /></div>
-            </div>
+            ))}
           </div>
         </motion.div>
       </div>
 
-      {/* Subject Stats — compact grid */}
+      {/* Subject Stats */}
       {subjectStats.length > 0 && (
         <motion.div variants={fadeUp} initial="hidden" animate="show" className="card mb-5 sm:mb-8 p-3 sm:p-6">
           <h2 className="mb-3 text-sm sm:text-lg font-bold" style={{ color: 'var(--text-primary)' }}>Thống kê theo môn</h2>
@@ -235,7 +331,7 @@ export default function DashboardPage() {
         </motion.div>
       )}
 
-      {/* Top 10 — mobile-friendly cards instead of table */}
+      {/* Top 10 */}
       <motion.div variants={fadeUp} initial="hidden" animate="show">
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-sm sm:text-lg font-bold" style={{ color: 'var(--text-primary)' }}>Top 10 tổng điểm</h2>
@@ -244,7 +340,7 @@ export default function DashboardPage() {
           </Link>
         </div>
 
-        {/* Mobile: card list / Desktop: table */}
+        {/* Mobile cards */}
         <div className="space-y-2 sm:hidden">
           {topStudents.map((s, i) => (
             <Link key={s.sbd} to={`/student/${s.sbd}`} className="card block p-3 group">
@@ -252,18 +348,13 @@ export default function DashboardPage() {
                 <div className={`flex h-8 w-8 items-center justify-center rounded-lg text-xs font-black ${
                   i === 0 ? 'bg-gradient-to-br from-amber-400 to-amber-600 text-white' :
                   i === 1 ? 'bg-gradient-to-br from-gray-300 to-gray-400 text-gray-800' :
-                  i === 2 ? 'bg-gradient-to-br from-amber-700 to-amber-800 text-white' :
-                  ''
+                  i === 2 ? 'bg-gradient-to-br from-amber-700 to-amber-800 text-white' : ''
                 }`} style={i > 2 ? { backgroundColor: 'var(--bg-elevated)', color: 'var(--text-muted)' } : undefined}>
                   {i + 1}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-sm truncate group-hover:text-emerald-400 transition-colors" style={{ color: 'var(--text-primary)' }}>
-                    {s.hoTen}
-                  </div>
-                  <div className="text-[10px]" style={{ color: 'var(--text-muted)' }}>
-                    {s.lop} • SBD {s.sbd}
-                  </div>
+                  <div className="font-semibold text-sm truncate group-hover:text-emerald-400 transition-colors" style={{ color: 'var(--text-primary)' }}>{s.hoTen}</div>
+                  <div className="text-[10px]" style={{ color: 'var(--text-muted)' }}>{s.lop} • SBD {s.sbd}</div>
                 </div>
                 <div className="stat-number text-base text-emerald-400">{formatScore(s.tongDiem)}</div>
               </div>
@@ -271,7 +362,7 @@ export default function DashboardPage() {
           ))}
         </div>
 
-        {/* Desktop: table */}
+        {/* Desktop table */}
         <div className="card overflow-hidden hidden sm:block">
           <table className="w-full text-sm">
             <thead>
@@ -288,17 +379,14 @@ export default function DashboardPage() {
                   <td className="px-4 py-3">
                     {i < 3 ? (
                       <span className={`badge ${i === 0 ? 'badge-gold' : i === 1 ? 'badge-silver' : 'badge-bronze'}`}>
-                        {i === 0 ? '🥇 Thủ khoa' : i === 1 ? '🥈 Á khoa' : '🥉 Hạng 3'}
+                        {['🥇', '🥈', '🥉'][i]}
                       </span>
-                    ) : (
-                      <span className="stat-number" style={{ color: 'var(--text-muted)' }}>{s.rank}</span>
-                    )}
+                    ) : <span className="stat-number" style={{ color: 'var(--text-muted)' }}>{s.rank}</span>}
                   </td>
                   <td className="px-4 py-3">
                     <Link to={`/student/${s.sbd}`} className="hover:text-emerald-400 transition-colors">
                       <span className="font-medium" style={{ color: 'var(--text-primary)' }}>{s.hoTen}</span>
-                      <br />
-                      <span className="text-xs" style={{ color: 'var(--text-muted)' }}>SBD: {s.sbd}</span>
+                      <br /><span className="text-xs" style={{ color: 'var(--text-muted)' }}>SBD: {s.sbd}</span>
                     </Link>
                   </td>
                   <td className="px-4 py-3" style={{ color: 'var(--text-secondary)' }}>{s.lop}</td>
