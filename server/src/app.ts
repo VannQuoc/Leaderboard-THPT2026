@@ -7,6 +7,7 @@ import path from 'node:path';
 import { config } from './config.js';
 import studentsRouter from './routes/students.js';
 import statsRouter from './routes/stats.js';
+import lookupRouter from './routes/lookup.js';
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(express.json());
 // API routes
 app.use('/api/students', studentsRouter);
 app.use('/api/stats', statsRouter);
+app.use('/api/lookup', lookupRouter);
 
 // Serve client static files in production
 app.use(express.static(config.clientDir));

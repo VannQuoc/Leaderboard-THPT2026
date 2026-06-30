@@ -13,7 +13,7 @@ export const config = {
   clientDir: path.join(PROJECT_ROOT, 'client', 'dist'),
   crawl: {
     primaryApi: 'https://s6.tuoitre.vn/api/diem-thi-thpt.htm',
-    year: 2025,
+    year: 2026,
     delayMs: 300,
     maxRetries: 3,
     headers: {
