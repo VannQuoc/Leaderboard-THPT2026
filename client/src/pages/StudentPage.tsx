@@ -17,12 +17,34 @@ export default function StudentPage() {
   useEffect(() => {
     if (!sbd) return;
     setLoading(true);
-    Promise.all([
-      api.students.get(sbd).then((r) => setStudent(r.data)),
-      api.stats.overview().then((r) => setOverview(r.data)),
-    ])
-      .catch(() => setError('Không tìm thấy thí sinh'))
-      .finally(() => setLoading(false));
+
+    const fetchStudent = async () => {
+      // Try API-first lookup (external API → DB fallback)
+      try {
+        const lookupRes = await api.lookup(sbd);
+        if (lookupRes.success && lookupRes.data) {
+          setStudent(lookupRes.data);
+          const overviewRes = await api.stats.overview();
+          setOverview(overviewRes.data);
+          return;
+        }
+      } catch {
+        // Lookup endpoint failed, try direct DB
+      }
+
+      try {
+        const [studentRes, overviewRes] = await Promise.all([
+          api.students.get(sbd),
+          api.stats.overview(),
+        ]);
+        setStudent(studentRes.data);
+        setOverview(overviewRes.data);
+      } catch {
+        setError('Không tìm thấy thí sinh');
+      }
+    };
+
+    fetchStudent().finally(() => setLoading(false));
   }, [sbd]);
 
   if (loading) {

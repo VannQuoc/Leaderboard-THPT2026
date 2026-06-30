@@ -44,5 +44,36 @@ export const api = {
       fetchJson<import('./types').ApiResponse<import('./types').RankingEntry[]>>(
         `${API_BASE}/stats/top-by-phong`,
       ),
+    khoiDefinitions: () =>
+      fetchJson<import('./types').ApiResponse<import('./types').KhoiDefinition[]>>(
+        `${API_BASE}/stats/khoi-definitions`,
+      ),
+    leaderboardByKhoi: (params: Record<string, string> = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return fetchJson<import('./types').ApiResponse<import('./types').LeaderboardEntry[]>>(
+        `${API_BASE}/stats/leaderboard-by-khoi${qs ? `?${qs}` : ''}`,
+      );
+    },
+    leaderboardByLop: (params: Record<string, string> = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return fetchJson<import('./types').ApiResponse<import('./types').LeaderboardEntry[]>>(
+        `${API_BASE}/stats/leaderboard-by-lop${qs ? `?${qs}` : ''}`,
+      );
+    },
+    leaderboardByPhong: (params: Record<string, string> = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return fetchJson<import('./types').ApiResponse<import('./types').LeaderboardEntry[]>>(
+        `${API_BASE}/stats/leaderboard-by-phong${qs ? `?${qs}` : ''}`,
+      );
+    },
+    crawlStatus: () =>
+      fetchJson<import('./types').ApiResponse<import('./types').CrawlStatus>>(
+        `${API_BASE}/stats/crawl-status`,
+      ),
   },
+  lookup: (sbd: string) =>
+    fetchJson<{ success: boolean; source?: string; data?: import('./types').Student; error?: string }>(
+      `${API_BASE}/lookup/${sbd}`,
+    ),
 };
+

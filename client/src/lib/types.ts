@@ -73,6 +73,23 @@ export interface SubjectStats {
   count: number;
 }
 
+export interface LeaderboardEntry {
+  rank: number;
+  student: Student;
+  khoiScore: number;
+  subjectScores: Record<string, number>;
+}
+
+export interface CrawlStatus {
+  running: boolean;
+  round: number;
+  crawled: number;
+  failed: number;
+  total: number;
+  remaining: number;
+  startedAt: string | null;
+}
+
 export interface ApiResponse<T> {
   success: boolean;
   data: T;
