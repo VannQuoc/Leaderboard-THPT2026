@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { getStudentsWithScores } from '../db/jsonDb.js';
 import { config } from '../config.js';
-import type { StudentWithScore, StatsOverview, ScoreDistribution, SubjectStats, TopByKhoi, RankingEntry, KhoiDefinition, KhoiJsonFile, ScoreData } from '../types.js';
+import type { StudentWithScore, StatsOverview, ScoreDistribution, SubjectStats, TopByKhoi, RankingEntry, KhoiDefinition, KhoiJsonFile, ScoreData, LeaderboardEntry } from '../types.js';
 import { SUBJECT_LABELS } from '../types.js';
 
 // Load khối definitions from JSON (cached)
@@ -169,3 +169,58 @@ export async function getBySubject(): Promise<SubjectStats[]> {
 export function getKhoiDefinitions(): KhoiDefinition[] {
   return loadKhoiDefinitions();
 }
+
+// --- Leaderboard by khối/lớp/phòng ---
+
+function buildLeaderboard(
+  students: StudentWithScore[],
+  khoi: KhoiDefinition,
+): LeaderboardEntry[] {
+  const entries: LeaderboardEntry[] = [];
+
+  for (const student of students) {
+    if (!student.scores) continue;
+    const khoiScore = calcKhoiScore(student.scores, khoi.subjects);
+    if (khoiScore === null) continue;
+
+    const subjectScores: Record<string, number> = {};
+    for (const subj of khoi.subjects) {
+      const val = (student.scores as Record<string, number | null>)[subj];
+      if (val !== null && val !== undefined) subjectScores[subj] = val;
+    }
+
+    entries.push({ rank: 0, student, khoiScore, subjectScores });
+  }
+
+  entries.sort((a, b) => b.khoiScore - a.khoiScore);
+  entries.forEach((e, i) => { e.rank = i + 1; });
+
+  return entries;
+}
+
+export async function getLeaderboardByKhoi(khoiCode: string): Promise<LeaderboardEntry[]> {
+  const khoi = loadKhoiDefinitions().find((k) => k.code === khoiCode);
+  if (!khoi) return [];
+
+  const students = await getStudentsWithScores();
+  return buildLeaderboard(students, khoi);
+}
+
+export async function getLeaderboardByLop(lop: string, khoiCode: string): Promise<LeaderboardEntry[]> {
+  const khoi = loadKhoiDefinitions().find((k) => k.code === khoiCode);
+  if (!khoi) return [];
+
+  const students = await getStudentsWithScores();
+  const filtered = students.filter((s) => s.lop === lop);
+  return buildLeaderboard(filtered, khoi);
+}
+
+export async function getLeaderboardByPhong(phong: number, khoiCode: string): Promise<LeaderboardEntry[]> {
+  const khoi = loadKhoiDefinitions().find((k) => k.code === khoiCode);
+  if (!khoi) return [];
+
+  const students = await getStudentsWithScores();
+  const filtered = students.filter((s) => s.phongThi === phong);
+  return buildLeaderboard(filtered, khoi);
+}
+

@@ -90,6 +90,13 @@ export interface SubjectStats {
   count: number;
 }
 
+export interface LeaderboardEntry {
+  rank: number;
+  student: StudentWithScore;
+  khoiScore: number;
+  subjectScores: Record<string, number>;
+}
+
 export interface ApiResponse<T> {
   success: boolean;
   data: T;
