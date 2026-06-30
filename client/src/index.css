@@ -19,10 +19,10 @@
   --color-amber-400: #fbbf24;
   --color-amber-500: #f59e0b;
 
-  --color-surface-dark: #0a0a0a;
-  --color-surface-card: #141414;
-  --color-surface-elevated: #1a1a1a;
-  --color-surface-border: #262626;
+  --color-surface-dark: #09090b;
+  --color-surface-card: #131316;
+  --color-surface-elevated: #1a1a1f;
+  --color-surface-border: #27272a;
 
   --color-surface-light: #fafaf9;
   --color-surface-card-light: #ffffff;
@@ -38,8 +38,8 @@
     --bg-elevated: var(--color-surface-elevated);
     --border: var(--color-surface-border);
     --text-primary: #fafaf9;
-    --text-secondary: #a8a29e;
-    --text-muted: #78716c;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
     --accent: var(--color-emerald-500);
     --accent-hover: var(--color-emerald-400);
     --gold: var(--color-amber-500);
@@ -130,13 +130,13 @@
   .card {
     background-color: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 14px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
   .card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 1px var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 15%, transparent);
   }
 
   .badge {
@@ -201,10 +201,138 @@
     animation: countUp 0.6s ease forwards;
   }
 
+  /* ===== HERO SECTION ===== */
+  .hero-section {
+    padding: 1.5rem 0;
+  }
+
+  @media (min-width: 640px) {
+    .hero-section {
+      padding: 2.5rem 0;
+    }
+  }
+
+  /* ===== SEARCH BOX ===== */
+  .search-box-wrapper {
+    position: relative;
+  }
+
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+  }
+
+  .search-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent),
+                0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: color 0.2s;
+  }
+
+  .search-box:focus-within .search-icon {
+    color: var(--accent);
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 14px 44px 14px 48px;
+    font-size: 15px;
+    font-family: var(--font-body);
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+  }
+
+  .search-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  @media (min-width: 640px) {
+    .search-input {
+      padding: 16px 48px 16px 52px;
+      font-size: 16px;
+    }
+    .search-icon {
+      left: 18px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    border: none;
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.15s, background-color 0.15s;
+  }
+
+  .search-clear:hover {
+    color: var(--text-primary);
+    background: color-mix(in srgb, var(--border) 80%, transparent);
+  }
+
+  /* ===== SEARCH DROPDOWN ===== */
+  .search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    z-index: 50;
+    max-height: 380px;
+    overflow-y: auto;
+  }
+
+  .search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    transition: background-color 0.12s;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .search-result-item:hover {
+    background-color: var(--bg-elevated);
+  }
+
+  .search-result-item:not(:last-child) {
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  }
+
   /* Mobile optimizations */
   @media (max-width: 640px) {
     html { font-size: 15px; }
-    
+
     body {
       -webkit-text-size-adjust: 100%;
       -webkit-tap-highlight-color: transparent;
@@ -212,18 +340,16 @@
     }
 
     .card {
-      border-radius: 0.625rem;
+      border-radius: 12px;
     }
-    
+
     footer {
       font-size: 0.625rem;
       padding: 0.75rem;
     }
 
-    /* Smoother scroll */
     html { scroll-behavior: smooth; }
-    
-    /* Disable hover effects on touch */
+
     @media (hover: none) {
       .table-row:hover { background-color: transparent; }
     }
@@ -237,4 +363,82 @@
       transition-duration: 0.01ms !important;
     }
   }
+
+  /* === Mystery Card (Click-to-reveal top 3) === */
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes float-sparkle {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+    50% { transform: translateY(-4px) scale(1.2); opacity: 1; }
+  }
+
+  .mystery-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  .mystery-card:hover {
+    transform: translateY(-2px);
+  }
+  .mystery-card:active {
+    transform: scale(0.97);
+  }
+
+  .mystery-card-gold {
+    background: linear-gradient(135deg, rgba(251,191,36,0.12), rgba(245,158,11,0.06), rgba(251,191,36,0.1));
+    border: 1px solid rgba(251,191,36,0.25);
+    box-shadow: 0 0 20px rgba(251,191,36,0.08), inset 0 1px 0 rgba(251,191,36,0.15);
+  }
+  .mystery-card-gold:hover {
+    box-shadow: 0 4px 32px rgba(251,191,36,0.15), inset 0 1px 0 rgba(251,191,36,0.2);
+    border-color: rgba(251,191,36,0.4);
+  }
+
+  .mystery-card-silver {
+    background: linear-gradient(135deg, rgba(156,163,175,0.12), rgba(107,114,128,0.06), rgba(156,163,175,0.1));
+    border: 1px solid rgba(156,163,175,0.25);
+    box-shadow: 0 0 20px rgba(156,163,175,0.08), inset 0 1px 0 rgba(156,163,175,0.15);
+  }
+  .mystery-card-silver:hover {
+    box-shadow: 0 4px 32px rgba(156,163,175,0.15), inset 0 1px 0 rgba(156,163,175,0.2);
+    border-color: rgba(156,163,175,0.4);
+  }
+
+  .mystery-card-bronze {
+    background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(217,119,6,0.06), rgba(180,83,9,0.1));
+    border: 1px solid rgba(180,83,9,0.25);
+    box-shadow: 0 0 20px rgba(180,83,9,0.08), inset 0 1px 0 rgba(180,83,9,0.15);
+  }
+  .mystery-card-bronze:hover {
+    box-shadow: 0 4px 32px rgba(180,83,9,0.15), inset 0 1px 0 rgba(180,83,9,0.2);
+    border-color: rgba(180,83,9,0.4);
+  }
+
+  .mystery-shimmer {
+    background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,0.06) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s ease-in-out infinite;
+  }
+
+  .mystery-glow {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .mystery-sparkle {
+    animation: float-sparkle 1.8s ease-in-out infinite;
+  }
+
+  /* Table row mystery effect */
+  .mystery-row-gold td { background: linear-gradient(90deg, rgba(251,191,36,0.04), rgba(251,191,36,0.08), rgba(251,191,36,0.04)); }
+  .mystery-row-silver td { background: linear-gradient(90deg, rgba(156,163,175,0.04), rgba(156,163,175,0.08), rgba(156,163,175,0.04)); }
+  .mystery-row-bronze td { background: linear-gradient(90deg, rgba(180,83,9,0.04), rgba(180,83,9,0.08), rgba(180,83,9,0.04)); }
 }
