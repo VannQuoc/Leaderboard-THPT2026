@@ -5,3 +5,4 @@ dist/
 .env.local
 server/data/scores.json
 generate_mock_scores.py
+*.tsbuildinfo
