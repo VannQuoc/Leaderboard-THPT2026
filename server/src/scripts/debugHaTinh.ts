@@ -1,7 +1,7 @@
 // Test with casesensitive + verify session matches
 import http from 'node:http';
 
-const SBD = '42008901';
+const SBD = '42008525';
 const HATINH_BASE = 'http://tracuudiemthi.hatinh.edu.vn';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36';
 const ANTICAPTCHA_KEY = '713350abe4798883ca27c52e080fb393';

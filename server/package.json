@@ -8,7 +8,8 @@
     "start": "node dist/server.js",
     "build": "tsc",
     "import": "tsx src/scripts/importExcel.ts",
-    "crawl": "tsx src/scripts/crawlScores.ts"
+    "crawl": "tsx src/scripts/crawlScores.ts",
+    "reset:scores": "tsx src/scripts/resetMissingScores.ts"
   },
   "devDependencies": {
     "@types/compression": "^1.8.1",
