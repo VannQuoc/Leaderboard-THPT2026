@@ -72,7 +72,6 @@ const HATINH_SUBJECT_MAP: Record<string, keyof ScoreData> = {
   'TI': 'tinHoc',
   'Tin học': 'tinHoc',
   'Tiếng Anh': 'ngoaiNgu',
-  'Ngoại ngữ': 'ngoaiNgu',
   'Anh văn': 'ngoaiNgu',
   'GDCD': 'gdcd',
   'CN công nghiệp': 'cnCongNghiep',

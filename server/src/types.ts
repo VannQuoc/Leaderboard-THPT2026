@@ -98,6 +98,13 @@ export interface LeaderboardEntry {
   bestKhoi?: string;
 }
 
+export interface SubjectDetailResponse {
+  subject: string;
+  subjectLabel: string;
+  distribution: ScoreDistribution[];
+  leaderboard: LeaderboardEntry[];
+}
+
 export interface ApiResponse<T> {
   success: boolean;
   data: T;

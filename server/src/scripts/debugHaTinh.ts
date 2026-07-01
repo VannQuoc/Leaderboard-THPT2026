@@ -16,7 +16,7 @@ function httpReq(method: string, url: string, headers: Record<string, string> = 
       path: urlObj.pathname + urlObj.search, method,
       headers: { 'User-Agent': UA, ...headers },
     };
-    if (body) opts.headers!['Content-Length'] = Buffer.byteLength(body).toString();
+    if (body) (opts.headers as Record<string, string>)['Content-Length'] = Buffer.byteLength(body).toString();
     const req = http.request(opts, (res) => {
       const chunks: Buffer[] = [];
       res.on('data', (c: Buffer) => chunks.push(c));

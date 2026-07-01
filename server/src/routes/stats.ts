@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getOverview, getDistribution, getBySubject, getTopByKhoi, getTopByLop, getTopByPhong, getKhoiDefinitions, getLeaderboardByKhoi, getLeaderboardByLop, getLeaderboardByPhong } from '../services/statsService.js';
+import { getOverview, getDistribution, getBySubject, getTopByKhoi, getTopByLop, getTopByPhong, getKhoiDefinitions, getLeaderboardByKhoi, getLeaderboardByLop, getLeaderboardByPhong, getSubjectDetails } from '../services/statsService.js';
 import { getCrawlStatus } from '../services/crawlerService.js';
 
 const router = Router();
@@ -19,6 +19,17 @@ router.get('/distribution', async (req, res) => {
 router.get('/by-subject', async (req, res) => {
   const { lop, khoi } = req.query as Record<string, string>;
   const data = await getBySubject({ lop, khoi });
+  res.json({ success: true, data });
+});
+
+router.get('/subject/:subjectCode', async (req, res) => {
+  const { subjectCode } = req.params;
+  const { lop, khoi } = req.query as Record<string, string>;
+  const data = await getSubjectDetails(subjectCode, { lop, khoi });
+  if (!data) {
+    res.status(404).json({ success: false, error: 'Subject not found' });
+    return;
+  }
   res.json({ success: true, data });
 });
 

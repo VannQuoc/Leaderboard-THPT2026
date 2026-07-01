@@ -8,7 +8,7 @@ import {
 import { Search, Users, TrendingUp, Activity, Target, ArrowRight, X, Clock, Trophy, Download, GraduationCap } from 'lucide-react';
 import { api } from '../lib/api';
 import { formatScore } from '../lib/utils';
-import type { StatsOverview, ScoreDistribution, SubjectStats, Student, KhoiDefinition } from '../lib/types';
+import type { StatsOverview, ScoreDistribution, SubjectStats, Student, KhoiDefinition, SubjectDetailResponse } from '../lib/types';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -95,6 +95,27 @@ export default function DashboardPage() {
   const [selectedKhoi, setSelectedKhoi] = useState('A00');
   const [selectedLop, setSelectedLop] = useState('12A1');
   const [khoiDefs, setKhoiDefs] = useState<KhoiDefinition[]>([]);
+
+  // Subject Modal
+  const [selectedSubjectForModal, setSelectedSubjectForModal] = useState<string | null>(null);
+  const [subjectDetails, setSubjectDetails] = useState<SubjectDetailResponse | null>(null);
+  const [loadingSubject, setLoadingSubject] = useState(false);
+
+  useEffect(() => {
+    if (!selectedSubjectForModal) {
+      setSubjectDetails(null);
+      return;
+    }
+    setLoadingSubject(true);
+    const params: Record<string, string> = {};
+    if (tab === 'khoi') params.khoi = selectedKhoi;
+    if (tab === 'lop') params.lop = selectedLop;
+
+    api.stats.subjectDetails(selectedSubjectForModal, params)
+      .then((r) => setSubjectDetails(r.data))
+      .catch(console.error)
+      .finally(() => setLoadingSubject(false));
+  }, [selectedSubjectForModal, tab, selectedKhoi, selectedLop]);
 
   const fetchStats = useCallback(() => {
     const params: Record<string, string> = {};
@@ -556,7 +577,11 @@ export default function DashboardPage() {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
             {subjectStats.map((s) => (
-              <div key={s.subject} className="card p-3 sm:p-4">
+              <div 
+                key={s.subject} 
+                className="card p-3 sm:p-4 cursor-pointer hover:border-emerald-500/30 transition-colors"
+                onClick={() => setSelectedSubjectForModal(s.subject)}
+              >
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-semibold text-xs sm:text-sm truncate" style={{ color: 'var(--text-primary)' }}>
                     {s.subjectLabel}
@@ -597,6 +622,125 @@ export default function DashboardPage() {
           </div>
         </motion.div>
       )}
+      {/* ===== SUBJECT DETAIL MODAL ===== */}
+      <AnimatePresence>
+        {selectedSubjectForModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            onClick={() => setSelectedSubjectForModal(null)}
+          >
+            <motion.div
+              initial={{ y: 50, scale: 0.95 }}
+              animate={{ y: 0, scale: 1 }}
+              exit={{ y: 20, scale: 0.95 }}
+              className="card w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between p-4 sm:p-6 border-b border-[var(--border)]">
+                <h2 className="text-lg sm:text-xl font-bold text-[var(--text-primary)]">
+                  Chi tiết môn {subjectDetails?.subjectLabel || '...'}
+                </h2>
+                <button
+                  onClick={() => setSelectedSubjectForModal(null)}
+                  className="p-2 rounded-full hover:bg-[var(--bg-elevated)] transition-colors text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto p-4 sm:p-6 custom-scrollbar">
+                {loadingSubject || !subjectDetails ? (
+                  <div className="h-40 flex items-center justify-center text-[var(--text-muted)]">
+                    Đang tải dữ liệu...
+                  </div>
+                ) : (
+                  <div className="grid lg:grid-cols-2 gap-6">
+                    {/* Phổ điểm */}
+                    <div>
+                      <h3 className="font-semibold text-[var(--text-secondary)] mb-4 flex items-center gap-2">
+                        <Activity className="h-4 w-4" /> Phổ điểm môn {subjectDetails.subjectLabel}
+                      </h3>
+                      <div className="h-64 card p-4">
+                        <ResponsiveContainer width="100%" height="100%">
+                          <BarChart data={subjectDetails.distribution} barCategoryGap="15%">
+                            <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
+                            <XAxis dataKey="range" tick={{ fill: 'var(--text-secondary)', fontSize: 11 }} tickLine={false} axisLine={false} />
+                            <YAxis tick={{ fill: 'var(--text-secondary)', fontSize: 11 }} tickLine={false} axisLine={false} width={35} />
+                            <Tooltip
+                              contentStyle={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '10px', color: 'var(--text-primary)', fontSize: 13, boxShadow: '0 8px 32px rgba(0,0,0,0.2)' }}
+                              formatter={(value) => [`${value} thí sinh`, 'Số lượng']}
+                            />
+                            <Bar dataKey="count" radius={[6, 6, 0, 0]}>
+                              {subjectDetails.distribution.map((_, i) => (
+                                <Cell key={i} fill={DIST_COLORS[i % DIST_COLORS.length]} />
+                              ))}
+                            </Bar>
+                          </BarChart>
+                        </ResponsiveContainer>
+                      </div>
+                    </div>
+
+                    {/* Top học sinh */}
+                    <div>
+                      <h3 className="font-semibold text-[var(--text-secondary)] mb-4 flex items-center gap-2">
+                        <Trophy className="h-4 w-4 text-amber-500" /> Bảng xếp hạng điểm cao
+                      </h3>
+                      <div className="card overflow-hidden">
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-sm">
+                            <thead>
+                              <tr className="border-b border-[var(--border)] text-[var(--text-muted)]">
+                                <th className="px-4 py-3 text-left font-semibold w-16">#</th>
+                                <th className="px-4 py-3 text-left font-semibold">Thí sinh</th>
+                                <th className="px-4 py-3 text-center font-semibold">Lớp</th>
+                                <th className="px-4 py-3 text-right font-semibold text-emerald-500">Điểm</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {subjectDetails.leaderboard.length === 0 ? (
+                                <tr>
+                                  <td colSpan={4} className="px-4 py-8 text-center text-[var(--text-muted)]">
+                                    Không có dữ liệu
+                                  </td>
+                                </tr>
+                              ) : (
+                                subjectDetails.leaderboard.map((entry, i) => (
+                                  <tr key={entry.student.sbd} className="border-b border-[var(--border)] hover:bg-[var(--bg-elevated)] transition-colors">
+                                    <td className="px-4 py-3 font-medium text-[var(--text-muted)]">
+                                      {i + 1}
+                                    </td>
+                                    <td className="px-4 py-3">
+                                      <Link to={`/student/${entry.student.sbd}`} onClick={(e) => e.stopPropagation()} className="font-semibold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors">
+                                        {entry.student.hoTen}
+                                      </Link>
+                                      <div className="text-[10px] text-[var(--text-muted)]">{entry.student.sbd}</div>
+                                    </td>
+                                    <td className="px-4 py-3 text-center text-[var(--text-secondary)]">
+                                      {entry.student.lop}
+                                    </td>
+                                    <td className="px-4 py-3 text-right">
+                                      <span className="stat-number text-base text-emerald-500">
+                                        {entry.khoiScore.toFixed(2)}
+                                      </span>
+                                    </td>
+                                  </tr>
+                                ))
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

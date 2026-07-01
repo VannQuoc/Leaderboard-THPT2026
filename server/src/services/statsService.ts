@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { getStudentsWithScores } from '../db/jsonDb.js';
 import { config } from '../config.js';
-import type { StudentWithScore, StatsOverview, ScoreDistribution, SubjectStats, TopByKhoi, RankingEntry, KhoiDefinition, KhoiJsonFile, ScoreData, LeaderboardEntry } from '../types.js';
+import type { StudentWithScore, StatsOverview, ScoreDistribution, SubjectStats, TopByKhoi, RankingEntry, KhoiDefinition, KhoiJsonFile, ScoreData, LeaderboardEntry, SubjectDetailResponse } from '../types.js';
 import { SUBJECT_LABELS } from '../types.js';
 
 // Load khối definitions from JSON (cached)
@@ -187,6 +187,61 @@ export async function getBySubject(filter?: StatsFilter): Promise<SubjectStats[]
       };
     })
     .filter((s): s is SubjectStats => s !== null);
+}
+
+export async function getSubjectDetails(subjectCode: string, filter?: StatsFilter): Promise<SubjectDetailResponse | null> {
+  const allStudents = await getStudentsWithScores();
+  const students = applyFilter(allStudents, filter);
+
+  if (!(subjectCode in SUBJECT_LABELS)) return null;
+
+  const validStudents = students.filter((s) => s.scores && s.scores[subjectCode as keyof ScoreData] !== null);
+
+  // 1. Distribution
+  const ranges = [
+    { label: '< 1', min: 0, max: 1 },
+    { label: '1-2', min: 1, max: 2 },
+    { label: '2-3', min: 2, max: 3 },
+    { label: '3-4', min: 3, max: 4 },
+    { label: '4-5', min: 4, max: 5 },
+    { label: '5-6', min: 5, max: 6 },
+    { label: '6-7', min: 6, max: 7 },
+    { label: '7-8', min: 7, max: 8 },
+    { label: '8-9', min: 8, max: 9 },
+    { label: '9-10', min: 9, max: 10.1 }, // include 10
+  ];
+
+  const distribution = ranges.map((r) => ({
+    range: r.label,
+    count: validStudents.filter((s) => {
+      const score = s.scores![subjectCode as keyof ScoreData] as number;
+      return score >= r.min && score < r.max;
+    }).length,
+  }));
+
+  // 2. Leaderboard
+  const sortedStudents = [...validStudents].sort((a, b) => {
+    return (b.scores![subjectCode as keyof ScoreData] as number) - (a.scores![subjectCode as keyof ScoreData] as number);
+  });
+
+  const topStudents = sortedStudents.slice(0, 50); // Top 50
+
+  const leaderboard: LeaderboardEntry[] = topStudents.map((s, i) => {
+    const score = s.scores![subjectCode as keyof ScoreData] as number;
+    return {
+      rank: i + 1,
+      student: s,
+      khoiScore: score,
+      subjectScores: { [subjectCode]: score },
+    };
+  });
+
+  return {
+    subject: subjectCode,
+    subjectLabel: SUBJECT_LABELS[subjectCode],
+    distribution,
+    leaderboard,
+  };
 }
 
 export function getKhoiDefinitions(): KhoiDefinition[] {

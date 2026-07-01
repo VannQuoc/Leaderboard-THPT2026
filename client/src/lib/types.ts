@@ -81,6 +81,13 @@ export interface LeaderboardEntry {
   bestKhoi?: string;
 }
 
+export interface SubjectDetailResponse {
+  subject: string;
+  subjectLabel: string;
+  distribution: ScoreDistribution[];
+  leaderboard: LeaderboardEntry[];
+}
+
 export interface CrawlStatus {
   running: boolean;
   round: number;

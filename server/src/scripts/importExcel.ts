@@ -38,7 +38,7 @@ async function importExcel(): Promise<void> {
     process.exit(1);
   }
 
-  const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(ws, { header: 1 }) as unknown[][];
+  const rows = XLSX.utils.sheet_to_json<unknown[]>(ws, { header: 1 });
 
   // Skip header row (index 0)
   const students: Student[] = [];

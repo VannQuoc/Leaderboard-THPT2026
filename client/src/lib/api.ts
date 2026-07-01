@@ -38,6 +38,12 @@ export const api = {
         `${API_BASE}/stats/by-subject${qs ? `?${qs}` : ''}`,
       );
     },
+    subjectDetails: (subjectCode: string, params: Record<string, string> = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return fetchJson<import('./types').ApiResponse<import('./types').SubjectDetailResponse>>(
+        `${API_BASE}/stats/subject/${subjectCode}${qs ? `?${qs}` : ''}`,
+      );
+    },
     topByKhoi: () =>
       fetchJson<import('./types').ApiResponse<import('./types').TopByKhoi[]>>(
         `${API_BASE}/stats/top-by-khoi`,
