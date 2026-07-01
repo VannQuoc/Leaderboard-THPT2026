@@ -1,3 +1,4 @@
+import http from 'node:http';
 import { config } from '../config.js';
 import { API_FIELD_MAP } from '../types.js';
 import type { ScoreData } from '../types.js';
@@ -112,7 +113,6 @@ function httpGet(url: string, headers: Record<string, string> = {}): Promise<{
   body: Buffer;
 }> {
   return new Promise((resolve, reject) => {
-    const { default: http } = await_http();
     const urlObj = new URL(url);
     const req = http.request({
       hostname: urlObj.hostname,
@@ -135,11 +135,7 @@ function httpGet(url: string, headers: Record<string, string> = {}): Promise<{
   });
 }
 
-// Lazy import for http
-function await_http() {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  return { default: require('node:http') as typeof import('node:http') };
-}
+
 
 function httpPost(url: string, body: string, headers: Record<string, string> = {}): Promise<{
   statusCode: number;
@@ -147,7 +143,6 @@ function httpPost(url: string, body: string, headers: Record<string, string> = {
   body: Buffer;
 }> {
   return new Promise((resolve, reject) => {
-    const { default: http } = await_http();
     const urlObj = new URL(url);
     const reqHeaders = {
       'User-Agent': HATINH_UA,
