@@ -95,6 +95,7 @@ export interface LeaderboardEntry {
   student: StudentWithScore;
   khoiScore: number;
   subjectScores: Record<string, number>;
+  bestKhoi?: string;
 }
 
 export interface ApiResponse<T> {

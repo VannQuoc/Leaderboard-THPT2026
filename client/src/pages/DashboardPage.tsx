@@ -1,14 +1,14 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router';
 import { motion, AnimatePresence, type Easing } from 'framer-motion';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell,
   CartesianGrid,
 } from 'recharts';
-import { Search, Users, TrendingUp, Activity, Target, ArrowRight, X, Clock } from 'lucide-react';
+import { Search, Users, TrendingUp, Activity, Target, ArrowRight, X, Clock, Trophy, Download, GraduationCap } from 'lucide-react';
 import { api } from '../lib/api';
 import { formatScore } from '../lib/utils';
-import type { StatsOverview, ScoreDistribution, SubjectStats, Student } from '../lib/types';
+import type { StatsOverview, ScoreDistribution, SubjectStats, Student, KhoiDefinition } from '../lib/types';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -91,12 +91,32 @@ export default function DashboardPage() {
   const searchRef = useRef<HTMLDivElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  useEffect(() => {
+  const [tab, setTab] = useState<'all' | 'khoi' | 'lop'>('all');
+  const [selectedKhoi, setSelectedKhoi] = useState('A00');
+  const [selectedLop, setSelectedLop] = useState('12A1');
+  const [khoiDefs, setKhoiDefs] = useState<KhoiDefinition[]>([]);
+
+  const fetchStats = useCallback(() => {
+    const params: Record<string, string> = {};
+    if (tab === 'khoi') params.khoi = selectedKhoi;
+    if (tab === 'lop') params.lop = selectedLop;
+
     Promise.all([
-      api.stats.overview().then((r) => setOverview(r.data)),
-      api.stats.distribution().then((r) => setDistribution(r.data)),
-      api.stats.bySubject().then((r) => setSubjectStats(r.data)),
+      api.stats.overview(params).then((r) => setOverview(r.data)),
+      api.stats.distribution(params).then((r) => setDistribution(r.data)),
+      api.stats.bySubject(params).then((r) => setSubjectStats(r.data)),
     ]).catch(console.error);
+  }, [tab, selectedKhoi, selectedLop]);
+
+  useEffect(() => {
+    fetchStats();
+  }, [fetchStats]);
+
+  useEffect(() => {
+    api.stats.khoiDefinitions().then((r) => {
+      setKhoiDefs(r.data);
+      if (r.data.length > 0) setSelectedKhoi(r.data[0].code);
+    }).catch(console.error);
   }, []);
 
   // Click outside to close
@@ -309,6 +329,94 @@ export default function DashboardPage() {
           </motion.div>
         )}
       </motion.section>
+
+      {/* ===== ACTIONS & FILTERS ===== */}
+      <motion.div variants={fadeUp} initial="hidden" animate="show" className="mb-5 sm:mb-8 flex flex-col gap-4">
+        {/* Mobile Action Buttons */}
+        <div className="flex sm:hidden gap-2">
+          <Link to="/leaderboard" className="flex-1 flex items-center justify-center gap-2 bg-emerald-600 text-white py-2.5 rounded-xl font-bold shadow-lg shadow-emerald-600/20 active:scale-95 transition-transform">
+            <Trophy className="h-4 w-4" /> Bảng xếp hạng
+          </Link>
+          <a href="/api/export/excel" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-primary)] px-4 py-2.5 rounded-xl font-bold active:scale-95 transition-transform">
+            <Download className="h-4 w-4" /> Excel
+          </a>
+        </div>
+
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          {/* Main Filter Tabs */}
+          <div className="flex gap-1.5 sm:gap-2">
+            {[
+              { key: 'all' as const, label: 'Toàn trường', icon: Users },
+              { key: 'khoi' as const, label: 'Theo Khối', icon: Trophy },
+              { key: 'lop' as const, label: 'Theo Lớp', icon: GraduationCap },
+            ].map(({ key, label, icon: Icon }) => (
+              <button
+                key={key}
+                onClick={() => setTab(key)}
+                className={`flex items-center gap-1.5 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm font-semibold transition-all ${
+                  tab === key
+                    ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/25'
+                    : 'hover:bg-emerald-500/10'
+                }`}
+                style={tab !== key ? { backgroundColor: 'var(--bg-card)', color: 'var(--text-secondary)', border: '1px solid var(--border)' } : undefined}
+              >
+                <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                <span>{label}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Export Button (Desktop) */}
+          <div className="hidden sm:block">
+             <a href="/api/export/excel" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] hover:bg-emerald-500/10 text-[var(--text-primary)] px-4 py-2.5 rounded-xl text-sm font-bold transition-colors">
+               <Download className="h-4 w-4" /> Xuất Excel
+             </a>
+          </div>
+        </div>
+
+        {/* Sub Filters (Khối / Lớp) */}
+        {tab === 'khoi' && (
+          <div className="flex flex-wrap gap-1.5">
+            {khoiDefs.map((k) => (
+              <button
+                key={k.code}
+                onClick={() => setSelectedKhoi(k.code)}
+                className={`rounded-lg px-2.5 py-1.5 text-[11px] sm:text-xs font-bold transition-all ${
+                  selectedKhoi === k.code
+                    ? 'text-white shadow-lg'
+                    : 'hover:opacity-80'
+                }`}
+                style={
+                  selectedKhoi === k.code
+                    ? { backgroundColor: k.color, boxShadow: `0 4px 12px ${k.color}40` }
+                    : { backgroundColor: 'var(--bg-card)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }
+                }
+              >
+                {k.code}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {tab === 'lop' && (
+          <div className="flex gap-1.5 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
+            {['12A1', '12A2', '12A3', '12A4', '12A5', '12A6', '12A7', '12A8', '12A9', '12A10', '12A11', '12A12', '12A13'].map((lop) => (
+              <button
+                key={lop}
+                onClick={() => setSelectedLop(lop)}
+                className={`whitespace-nowrap rounded-lg px-2.5 py-1.5 text-[11px] sm:text-xs font-medium transition-all ${
+                  selectedLop === lop
+                    ? 'bg-teal-600 text-white'
+                    : ''
+                }`}
+                style={selectedLop !== lop ? { backgroundColor: 'var(--bg-card)', color: 'var(--text-secondary)', border: '1px solid var(--border)' } : undefined}
+              >
+                {lop}
+              </button>
+            ))}
+          </div>
+        )}
+      </motion.div>
 
       {/* ===== STAT CARDS ===== */}
       <motion.div

@@ -43,7 +43,7 @@ export default function LeaderboardPage() {
   useEffect(() => {
     api.stats.khoiDefinitions().then((r) => {
       setKhoiDefs(r.data);
-      if (r.data.length > 0) setSelectedKhoi(r.data[0].code);
+      if (r.data.length > 0) setSelectedKhoi('all');
     }).catch(console.error);
   }, []);
 
@@ -175,6 +175,27 @@ export default function LeaderboardPage() {
         <p className="text-[10px] sm:text-xs font-semibold mb-1.5" style={{ color: 'var(--text-muted)' }}>
           Chọn khối thi
         </p>
+        <div className="mb-2">
+          <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider mb-1 block" style={{ color: 'var(--text-muted)' }}>
+            Chung
+          </span>
+          <button
+            onClick={() => changeKhoi('all')}
+            className={`rounded-lg px-2.5 py-1.5 text-[11px] sm:text-xs font-bold transition-all ${
+              selectedKhoi === 'all'
+                ? 'text-white shadow-lg bg-emerald-600'
+                : 'hover:opacity-80'
+            }`}
+            style={
+              selectedKhoi !== 'all'
+                ? { backgroundColor: 'var(--bg-card)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }
+                : undefined
+            }
+          >
+            Tất cả khối
+          </button>
+        </div>
+        
         {khoiGroups.map((group) => {
           const khoiInGroup = khoiDefs.filter((k) => k.group === group);
           return (
@@ -207,8 +228,7 @@ export default function LeaderboardPage() {
         })}
       </motion.div>
 
-      {/* ===== ACTIVE KHOI INFO ===== */}
-      {activeKhoi && (
+      {activeKhoi ? (
         <div className="card px-3 py-2 sm:px-4 sm:py-3 mb-4 flex items-center gap-3">
           <div
             className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl text-white text-xs sm:text-sm font-black"
@@ -225,7 +245,23 @@ export default function LeaderboardPage() {
             </div>
           </div>
         </div>
-      )}
+      ) : selectedKhoi === 'all' ? (
+        <div className="card px-3 py-2 sm:px-4 sm:py-3 mb-4 flex items-center gap-3">
+          <div
+            className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl text-white text-xs sm:text-sm font-black bg-emerald-600"
+          >
+            ALL
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-sm sm:text-base" style={{ color: 'var(--text-primary)' }}>
+              Tất cả khối (Điểm Khối Cao Nhất)
+            </div>
+            <div className="text-[10px] sm:text-xs" style={{ color: 'var(--text-muted)' }}>
+              Xếp hạng theo tổng 3 môn cao nhất • {total} thí sinh
+            </div>
+          </div>
+        </div>
+      ) : null}
 
       {/* ===== LEADERBOARD TABLE ===== */}
       {/* Mobile cards */}
@@ -336,9 +372,10 @@ export default function LeaderboardPage() {
                         <div className="text-right flex-shrink-0">
                           <div className="stat-number text-base" style={{ color: activeKhoi?.color || 'var(--accent)' }}>
                             {entry.khoiScore.toFixed(2)}
+                            {entry.bestKhoi && <span className="ml-1 text-[10px] bg-emerald-500/10 text-emerald-500 px-1 py-0.5 rounded font-bold">{entry.bestKhoi}</span>}
                           </div>
                           <div className="text-[9px]" style={{ color: 'var(--text-muted)' }}>
-                            {Object.values(entry.subjectScores).map((v) => v.toFixed(1)).join(' + ')}
+                            {Object.entries(entry.subjectScores).map(([subj, val]) => `${getSubjectLabel(subj)}: ${val.toFixed(2)}`).join(' • ')}
                           </div>
                         </div>
                       </div>
@@ -361,13 +398,19 @@ export default function LeaderboardPage() {
                 <th className="px-4 py-3 text-left font-semibold" style={{ color: 'var(--text-muted)' }}>Thí sinh</th>
                 <th className="px-4 py-3 text-left font-semibold" style={{ color: 'var(--text-muted)' }}>Lớp</th>
                 <th className="px-4 py-3 text-left font-semibold" style={{ color: 'var(--text-muted)' }}>Phòng</th>
-                {activeKhoi?.subjects.map((subj) => (
-                  <th key={subj} className="px-3 py-3 text-center font-semibold" style={{ color: 'var(--text-muted)' }}>
-                    {getSubjectLabel(subj)}
+                {activeKhoi ? (
+                  activeKhoi.subjects.map((subj) => (
+                    <th key={subj} className="px-3 py-3 text-center font-semibold" style={{ color: 'var(--text-muted)' }}>
+                      {getSubjectLabel(subj)}
+                    </th>
+                  ))
+                ) : (
+                  <th className="px-3 py-3 text-center font-semibold" style={{ color: 'var(--text-muted)' }}>
+                    Điểm chi tiết
                   </th>
-                ))}
+                )}
                 <th className="px-4 py-3 text-right font-semibold" style={{ color: activeKhoi?.color || 'var(--accent)' }}>
-                  Tổng khối
+                  Tổng điểm
                 </th>
               </tr>
             </thead>
@@ -375,7 +418,7 @@ export default function LeaderboardPage() {
               {loading ? (
                 Array.from({ length: 10 }).map((_, i) => (
                   <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
-                    {Array.from({ length: 5 + (activeKhoi?.subjects.length || 3) }).map((_, j) => (
+                    {Array.from({ length: 5 + (activeKhoi ? activeKhoi.subjects.length : 1) }).map((_, j) => (
                       <td key={j} className="px-4 py-4">
                         <div className="h-4 animate-pulse rounded" style={{ backgroundColor: 'var(--bg-elevated)', width: j === 1 ? '140px' : '50px' }} />
                       </td>
@@ -384,7 +427,7 @@ export default function LeaderboardPage() {
                 ))
               ) : entries.length === 0 ? (
                 <tr>
-                  <td colSpan={5 + (activeKhoi?.subjects.length || 3)} className="px-4 py-12 text-center" style={{ color: 'var(--text-muted)' }}>
+                  <td colSpan={5 + (activeKhoi ? activeKhoi.subjects.length : 1)} className="px-4 py-12 text-center" style={{ color: 'var(--text-muted)' }}>
                     Không có thí sinh trong phạm vi này
                   </td>
                 </tr>
@@ -449,23 +492,34 @@ export default function LeaderboardPage() {
                         <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ color: 'var(--text-secondary)' }}>{entry.student.phongThi}</motion.span>
                       )}
                     </td>
-                    {activeKhoi?.subjects.map((subj) => (
-                      <td key={subj} className="px-3 py-3 text-center">
+                    {activeKhoi ? (
+                      activeKhoi.subjects.map((subj) => (
+                        <td key={subj} className="px-3 py-3 text-center">
+                          {isHidden(entry.rank) ? (
+                            <div className="mx-auto h-3.5 w-10 rounded" style={{ background: `linear-gradient(90deg, ${RANK_THEME[entry.rank as 1|2|3].sparkleColor}15, ${RANK_THEME[entry.rank as 1|2|3].sparkleColor}06)` }} />
+                          ) : (
+                            <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 }} className="stat-number text-sm" style={{ color: 'var(--text-primary)' }}>
+                              {entry.subjectScores[subj]?.toFixed(2) ?? '—'}
+                            </motion.span>
+                          )}
+                        </td>
+                      ))
+                    ) : (
+                      <td className="px-3 py-3 text-center text-xs" style={{ color: 'var(--text-muted)' }}>
                         {isHidden(entry.rank) ? (
-                          <div className="mx-auto h-3.5 w-10 rounded" style={{ background: `linear-gradient(90deg, ${RANK_THEME[entry.rank as 1|2|3].sparkleColor}15, ${RANK_THEME[entry.rank as 1|2|3].sparkleColor}06)` }} />
+                            <div className="mx-auto h-3.5 w-24 rounded" style={{ background: `linear-gradient(90deg, ${RANK_THEME[entry.rank as 1|2|3].sparkleColor}15, ${RANK_THEME[entry.rank as 1|2|3].sparkleColor}06)` }} />
                         ) : (
-                          <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 }} className="stat-number text-sm" style={{ color: 'var(--text-primary)' }}>
-                            {entry.subjectScores[subj]?.toFixed(2) ?? '—'}
-                          </motion.span>
+                            Object.entries(entry.subjectScores).map(([subj, val]) => `${getSubjectLabel(subj)}: ${val.toFixed(2)}`).join(', ')
                         )}
                       </td>
-                    ))}
+                    )}
                     <td className="px-4 py-3 text-right">
                       {isHidden(entry.rank) ? (
                         <div className="ml-auto h-4 w-14 rounded" style={{ background: `linear-gradient(90deg, ${RANK_THEME[entry.rank as 1|2|3].sparkleColor}20, ${RANK_THEME[entry.rank as 1|2|3].sparkleColor}08)` }} />
                       ) : (
-                        <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.15 }} className="stat-number text-base" style={{ color: activeKhoi?.color || 'var(--accent)' }}>
+                        <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.15 }} className="stat-number text-base flex flex-col items-end" style={{ color: activeKhoi?.color || 'var(--accent)' }}>
                           {entry.khoiScore.toFixed(2)}
+                          {entry.bestKhoi && <span className="text-[10px] bg-emerald-500/10 text-emerald-500 px-1 py-0.5 rounded font-bold mt-1">{entry.bestKhoi}</span>}
                         </motion.span>
                       )}
                     </td>

@@ -13,19 +13,25 @@ function calculateTongDiem(scores: ScoreData): number {
 router.get('/:sbd', async (req, res) => {
   const { sbd } = req.params;
 
-  // 1. Try external API first
+  // 1. Check local database first
+  const students = await getStudentsWithScores();
+  const student = students.find((s) => s.sbd === sbd);
+
+  // If student exists and already has scores, return immediately
+  if (student && student.scores) {
+    res.json({ success: true, source: 'db', data: student });
+    return;
+  }
+
+  // 2. Fallback to external API if score not found locally
   try {
     const scores = await providerManager.fetchScore(sbd, 2);
     if (scores) {
-      // Found via API — also update DB cache
-      const students = await getStudentsWithScores();
-      const student = students.find((s) => s.sbd === sbd);
-
       if (student) {
         student.scores = scores;
         student.tongDiem = calculateTongDiem(scores);
 
-        // Update DB in background (don't await to keep response fast)
+        // Update DB in background
         const scoresData = await readScores();
         const idx = scoresData.results.findIndex((r) => r.sbd === sbd);
         if (idx >= 0) {
@@ -41,7 +47,7 @@ router.get('/:sbd', async (req, res) => {
         return;
       }
 
-      // Student not in our DB but has scores from API
+      // Student not in our local list but API returned scores
       res.json({
         success: true,
         source: 'api',
@@ -53,13 +59,10 @@ router.get('/:sbd', async (req, res) => {
     console.warn(`API lookup failed for ${sbd}:`, err);
   }
 
-  // 2. Fallback to database
-  const students = await getStudentsWithScores();
-  const student = students.find((s) => s.sbd === sbd);
-
+  // If we reach here, we either don't have the student or they have no scores and API failed
   if (student) {
-    res.json({ success: true, source: 'db', data: student });
-    return;
+     res.json({ success: true, source: 'db', data: student }); // Return what we have (even without scores)
+     return;
   }
 
   res.status(404).json({ success: false, error: 'Student not found' });

@@ -20,18 +20,24 @@ export const api = {
       ),
   },
   stats: {
-    overview: () =>
-      fetchJson<import('./types').ApiResponse<import('./types').StatsOverview>>(
-        `${API_BASE}/stats/overview`,
-      ),
-    distribution: () =>
-      fetchJson<import('./types').ApiResponse<import('./types').ScoreDistribution[]>>(
-        `${API_BASE}/stats/distribution`,
-      ),
-    bySubject: () =>
-      fetchJson<import('./types').ApiResponse<import('./types').SubjectStats[]>>(
-        `${API_BASE}/stats/by-subject`,
-      ),
+    overview: (params: Record<string, string> = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return fetchJson<import('./types').ApiResponse<import('./types').StatsOverview>>(
+        `${API_BASE}/stats/overview${qs ? `?${qs}` : ''}`,
+      );
+    },
+    distribution: (params: Record<string, string> = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return fetchJson<import('./types').ApiResponse<import('./types').ScoreDistribution[]>>(
+        `${API_BASE}/stats/distribution${qs ? `?${qs}` : ''}`,
+      );
+    },
+    bySubject: (params: Record<string, string> = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return fetchJson<import('./types').ApiResponse<import('./types').SubjectStats[]>>(
+        `${API_BASE}/stats/by-subject${qs ? `?${qs}` : ''}`,
+      );
+    },
     topByKhoi: () =>
       fetchJson<import('./types').ApiResponse<import('./types').TopByKhoi[]>>(
         `${API_BASE}/stats/top-by-khoi`,

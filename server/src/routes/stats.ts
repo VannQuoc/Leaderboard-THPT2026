@@ -4,18 +4,21 @@ import { getCrawlStatus } from '../services/crawlerService.js';
 
 const router = Router();
 
-router.get('/overview', async (_req, res) => {
-  const data = await getOverview();
+router.get('/overview', async (req, res) => {
+  const { lop, khoi } = req.query as Record<string, string>;
+  const data = await getOverview({ lop, khoi });
   res.json({ success: true, data });
 });
 
-router.get('/distribution', async (_req, res) => {
-  const data = await getDistribution();
+router.get('/distribution', async (req, res) => {
+  const { lop, khoi } = req.query as Record<string, string>;
+  const data = await getDistribution({ lop, khoi });
   res.json({ success: true, data });
 });
 
-router.get('/by-subject', async (_req, res) => {
-  const data = await getBySubject();
+router.get('/by-subject', async (req, res) => {
+  const { lop, khoi } = req.query as Record<string, string>;
+  const data = await getBySubject({ lop, khoi });
   res.json({ success: true, data });
 });
 

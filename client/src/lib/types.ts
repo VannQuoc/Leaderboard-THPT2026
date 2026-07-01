@@ -78,6 +78,7 @@ export interface LeaderboardEntry {
   student: Student;
   khoiScore: number;
   subjectScores: Record<string, number>;
+  bestKhoi?: string;
 }
 
 export interface CrawlStatus {
