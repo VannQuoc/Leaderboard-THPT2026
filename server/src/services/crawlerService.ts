@@ -2,9 +2,9 @@ import { readStudents, readScores, writeScores } from '../db/jsonDb.js';
 import { providerManager } from './scoreProviders.js';
 import type { ScoreData, StudentWithScore } from '../types.js';
 
-const CONCURRENCY = 5;
-const SAVE_INTERVAL = 20;
-const DELAY_BETWEEN_MS = 200;
+const CONCURRENCY = 10;
+const SAVE_INTERVAL = 30;
+const DELAY_BETWEEN_MS = 100;
 
 function calculateTongDiem(scores: ScoreData): number {
   const values = Object.values(scores).filter((v): v is number => v !== null && v >= 0);
