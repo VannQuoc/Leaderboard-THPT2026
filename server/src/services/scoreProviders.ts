@@ -13,43 +13,37 @@ export interface ScoreProvider {
 // --- AntiCaptcha solver ---
 
 const ANTICAPTCHA_KEY = '713350abe4798883ca27c52e080fb393';
-const ANTICAPTCHA_CREATE = 'https://api.anticaptcha.top/createTask';
-const ANTICAPTCHA_RESULT = 'https://api.anticaptcha.top/getTaskResult';
+const ANTICAPTCHA_URL = 'https://anticaptcha.top/api/captcha';
 
 async function solveCaptcha(imageBase64: string): Promise<string | null> {
-  // Create task
-  const createRes = await fetch(ANTICAPTCHA_CREATE, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      clientKey: ANTICAPTCHA_KEY,
-      task: { type: 'ImageToTextTask', body: imageBase64 },
-    }),
-  });
-  const createJson = await createRes.json() as { errorId: number; taskId?: number };
-  if (createJson.errorId !== 0 || !createJson.taskId) return null;
-
-  // Poll for result (max 30s)
-  for (let i = 0; i < 10; i++) {
-    await new Promise((r) => setTimeout(r, 3000));
-
-    const resultRes = await fetch(ANTICAPTCHA_RESULT, {
+  try {
+    const res = await fetch(ANTICAPTCHA_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ clientKey: ANTICAPTCHA_KEY, taskId: createJson.taskId }),
+      body: JSON.stringify({
+        apikey: ANTICAPTCHA_KEY,
+        img: imageBase64,
+        type: 14, // Image to text autodetect
+        casesensitive: 1, // preserve case
+      }),
     });
-    const resultJson = await resultRes.json() as {
-      errorId: number;
-      status: string;
-      solution?: { text: string };
+
+    const json = await res.json() as {
+      success: boolean;
+      message: string;
+      captcha: string;
     };
 
-    if (resultJson.status === 'ready' && resultJson.solution?.text) {
-      return resultJson.solution.text;
+    if (json.success && json.captcha && json.captcha !== 'ERROR') {
+      return json.captcha;
     }
-    if (resultJson.errorId !== 0) return null;
+
+    console.warn(`  ⚠️ Captcha solve failed: ${json.message}`);
+    return null;
+  } catch (err) {
+    console.warn('  ⚠️ Captcha API error:', err);
+    return null;
   }
-  return null;
 }
 
 // --- HaTinh Provider (with captcha) ---
@@ -112,46 +106,110 @@ function parseDiemThi(diemThiStr: string): ScoreData | null {
   return found ? (scores as unknown as ScoreData) : null;
 }
 
+function httpGet(url: string, headers: Record<string, string> = {}): Promise<{
+  statusCode: number;
+  headers: Record<string, string | string[] | undefined>;
+  body: Buffer;
+}> {
+  return new Promise((resolve, reject) => {
+    const { default: http } = await_http();
+    const urlObj = new URL(url);
+    const req = http.request({
+      hostname: urlObj.hostname,
+      port: urlObj.port || 80,
+      path: urlObj.pathname + urlObj.search,
+      method: 'GET',
+      headers: { 'User-Agent': HATINH_UA, ...headers },
+    }, (res) => {
+      const chunks: Buffer[] = [];
+      res.on('data', (c: Buffer) => chunks.push(c));
+      res.on('end', () => resolve({
+        statusCode: res.statusCode || 0,
+        headers: res.headers as Record<string, string | string[] | undefined>,
+        body: Buffer.concat(chunks),
+      }));
+    });
+    req.on('error', reject);
+    req.setTimeout(10000, () => { req.destroy(); reject(new Error('Timeout')); });
+    req.end();
+  });
+}
+
+// Lazy import for http
+function await_http() {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  return { default: require('node:http') as typeof import('node:http') };
+}
+
+function httpPost(url: string, body: string, headers: Record<string, string> = {}): Promise<{
+  statusCode: number;
+  headers: Record<string, string | string[] | undefined>;
+  body: Buffer;
+}> {
+  return new Promise((resolve, reject) => {
+    const { default: http } = await_http();
+    const urlObj = new URL(url);
+    const reqHeaders = {
+      'User-Agent': HATINH_UA,
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      'Content-Length': Buffer.byteLength(body).toString(),
+      ...headers,
+    };
+    const req = http.request({
+      hostname: urlObj.hostname,
+      port: urlObj.port || 80,
+      path: urlObj.pathname + urlObj.search,
+      method: 'POST',
+      headers: reqHeaders,
+    }, (res) => {
+      const chunks: Buffer[] = [];
+      res.on('data', (c: Buffer) => chunks.push(c));
+      res.on('end', () => resolve({
+        statusCode: res.statusCode || 0,
+        headers: res.headers as Record<string, string | string[] | undefined>,
+        body: Buffer.concat(chunks),
+      }));
+    });
+    req.on('error', reject);
+    req.setTimeout(10000, () => { req.destroy(); reject(new Error('Timeout')); });
+    req.write(body);
+    req.end();
+  });
+}
+
 async function getSessionAndCaptcha(): Promise<{ sessionCookie: string; captchaText: string } | null> {
   try {
-    // Step 1: Get session cookie by visiting the page
-    const pageRes = await fetch(HATINH_BASE, {
-      headers: { 'User-Agent': HATINH_UA },
-      redirect: 'manual',
+    // Send a fake session to captcha endpoint → server responds with real Set-Cookie
+    // IMPORTANT: the captcha image is tied to THIS session, so we must use
+    // the SAME session for both captcha solving and the search request.
+    const fakeCookie = `ASP.NET_SessionId=fake${Date.now().toString(36)}`;
+    const time = Date.now();
+
+    const captchaRes = await httpGet(`${HATINH_BASE}/TraCuu/GetCaptcha?time=${time}&choose=1`, {
+      'Cookie': fakeCookie,
+      'Referer': `${HATINH_BASE}/`,
     });
-    const setCookies = pageRes.headers.getSetCookie?.() || [];
-    let sessionCookie = '';
-    for (const c of setCookies) {
-      const match = c.match(/ASP\.NET_SessionId=([^;]+)/);
-      if (match) { sessionCookie = `ASP.NET_SessionId=${match[1]}`; break; }
-    }
-    // If no set-cookie, try from raw headers
-    if (!sessionCookie) {
-      const raw = pageRes.headers.get('set-cookie') || '';
-      const match = raw.match(/ASP\.NET_SessionId=([^;]+)/);
-      if (match) sessionCookie = `ASP.NET_SessionId=${match[1]}`;
-    }
-    if (!sessionCookie) {
-      console.warn('  ⚠️ No session cookie from HaTinh');
+
+    if (captchaRes.statusCode !== 200 || captchaRes.body.length < 100) {
+      console.warn('  ⚠️ Captcha image failed:', captchaRes.statusCode, captchaRes.body.length);
       return null;
     }
 
-    // Step 2: Get captcha image
-    const time = Date.now();
-    const captchaRes = await fetch(`${HATINH_BASE}/TraCuu/GetCaptcha?time=${time}&choose=1`, {
-      headers: {
-        'User-Agent': HATINH_UA,
-        'Cookie': sessionCookie,
-        'Referer': `${HATINH_BASE}/`,
-        'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
-      },
-    });
-    if (!captchaRes.ok) return null;
+    // Extract real session from response Set-Cookie header
+    let sessionCookie = '';
+    const rawCookies = captchaRes.headers['set-cookie'];
+    const cookieArr = Array.isArray(rawCookies) ? rawCookies : rawCookies ? [rawCookies] : [];
+    for (const c of cookieArr) {
+      const match = c.match(/ASP\.NET_SessionId=([^;]+)/);
+      if (match) { sessionCookie = `ASP.NET_SessionId=${match[1]}`; break; }
+    }
 
-    const imageBuffer = Buffer.from(await captchaRes.arrayBuffer());
-    const imageBase64 = imageBuffer.toString('base64');
+    // If no Set-Cookie returned, use the fake cookie (server accepted it)
+    if (!sessionCookie) sessionCookie = fakeCookie;
 
-    // Step 3: Solve captcha
+    const imageBase64 = captchaRes.body.toString('base64');
+
+    // Solve captcha
     const captchaText = await solveCaptcha(imageBase64);
     if (!captchaText) {
       console.warn('  ⚠️ Captcha solving failed');
@@ -172,22 +230,17 @@ export class HaTinhProvider implements ScoreProvider {
     const session = await getSessionAndCaptcha();
     if (!session) return null;
 
-    const res = await fetch(`${HATINH_BASE}/TraCuu/TraCuu`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'User-Agent': HATINH_UA,
-        'Cookie': session.sessionCookie,
-        'Origin': HATINH_BASE,
-        'Referer': `${HATINH_BASE}/`,
-        'X-Requested-With': 'XMLHttpRequest',
-      },
-      body: `SOBAODANH=${sbd}&ConfirmCode=${encodeURIComponent(session.captchaText)}`,
+    const body = `SOBAODANH=${sbd}&ConfirmCode=${encodeURIComponent(session.captchaText)}`;
+    const res = await httpPost(`${HATINH_BASE}/TraCuu/TraCuu`, body, {
+      'Cookie': session.sessionCookie,
+      'Origin': HATINH_BASE,
+      'Referer': `${HATINH_BASE}/`,
+      'X-Requested-With': 'XMLHttpRequest',
     });
 
-    if (!res.ok) throw new Error(`HaTinh HTTP ${res.status}`);
+    if (res.statusCode !== 200) throw new Error(`HaTinh HTTP ${res.statusCode}`);
 
-    const json = await res.json() as { DIEM_THI?: string };
+    const json = JSON.parse(res.body.toString()) as { DIEM_THI?: string };
     if (!json.DIEM_THI || json.DIEM_THI.trim() === '') return null;
 
     return parseDiemThi(json.DIEM_THI);
@@ -286,8 +339,8 @@ export class ScoreProviderManager {
   }
 }
 
-// HaTinh is primary now (TuoiTre not responding)
+// HaTinh only (TuoiTre returning wrong data)
 export const providerManager = new ScoreProviderManager([
   new HaTinhProvider(),
-  new TuoiTreProvider(),
+  // new TuoiTreProvider(), // disabled: returning incorrect results
 ]);
